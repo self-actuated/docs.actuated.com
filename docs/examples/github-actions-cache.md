@@ -89,4 +89,4 @@ The `path` parameter is used to set the paths on the runner to cache or restore.
 ## Further reading
 
 * Checkout the list of `actions/cache` [examples](https://github.com/actions/cache/blob/main/examples.md) to configure caching for different languages and frameworks.
-* See our blog: [Make your builds run faster with Caching for GitHub Actions](https://actuated.dev/blog/caching-in-github-actions)
+* See our blog: [Make your builds run faster with Caching for GitHub Actions](https://actuated.com/blog/caching-in-github-actions)

@@ -55,18 +55,18 @@ For GitHub users, a GitHub organisation is required for installation, and runner
 
 ## Is there a sponsored subscription for Open Source projects?
 
-We have a sponsored program with the CNCF and Ampere for various Open Source projects, you can find out more here: [Announcing managed Arm CI for CNCF projects](https://actuated.dev/blog/arm-ci-cncf-ampere).
+We have a sponsored program with the CNCF and Ampere for various Open Source projects, you can find out more here: [Announcing managed Arm CI for CNCF projects](https://actuated.com/blog/arm-ci-cncf-ampere).
 
 Sponsored projects are required to [add our GitHub badge](/images/actuated-badge.png) to the top of their README file for each repository where the actuated is being used, along with any other GitHub badges such as build status, code coverage, etc.
 
 ```md
-[![Arm CI sponsored by Actuated](https://img.shields.io/badge/SA_actuated.dev-004BDD)](https://actuated.dev/)
+[![Arm CI sponsored by Actuated](https://img.shields.io/badge/SA_actuated.com-004BDD)](https://actuated.com/)
 ```
 
 or
 
 ```html
-<a href="https://actuated.dev/"><img alt="Arm CI sponsored by Actuated" src="https://docs.actuated.dev/images/actuated-badge.png" width="120px"></img></a>
+<a href="https://actuated.com/"><img alt="Arm CI sponsored by Actuated" src="https://docs.actuated.com/images/actuated-badge.png" width="120px"></img></a>
 ```
 
 For an example of what this would look like, see the [inletsctl project README](https://github.com/inlets/inletsctl).
@@ -340,7 +340,7 @@ If you only needed to run Arm builds from 9-5pm, you could absolutely delete the
 
 Yes, both for GitHub and GitLab CI.
 
-See also: [Accelerate GitHub Actions with dedicated GPUs](https://actuated.dev/blog/gpus-for-github-actions)
+See also: [Accelerate GitHub Actions with dedicated GPUs](https://actuated.com/blog/gpus-for-github-actions)
 
 ## Can Virtual Machines be launched within a GitHub Action?
 
@@ -350,7 +350,7 @@ Use-cases may include: building and snapshotting VM images, running Packer, laun
 
 It's disabled by default, but you can opt-in to the feature by following the steps in this article:
 
-[How to run a KVM guest in your GitHub Actions](https://actuated.dev/blog/kvm-in-github-actions)
+[How to run a KVM guest in your GitHub Actions](https://actuated.com/blog/kvm-in-github-actions)
 
 At time of writing, only Intel and AMD CPUs support nested virtualisation.
 

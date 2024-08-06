@@ -4,7 +4,7 @@ Monitor Actuated runners and jobs from the command line.
 
 ## Installation
 
-Download and installation instruction are available via the [actuated-dashboard](https://dashboard.actuated.dev/cli)
+Download and installation instruction are available via the [actuated-dashboard](https://dashboard.actuated.com/cli)
 
 You'll need to run `actuated-cli auth` first, so that you can get a Personal Access Token with the appropriate scopes from GitHub.
 

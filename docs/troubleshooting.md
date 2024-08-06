@@ -20,7 +20,7 @@ If you'd like to upgrade your plan for more concurrent builds, a higher level of
 
 ## The Actuated Dashboard
 
-The first port of call should be the [Actuated Dashboard](https://dashboard.actuated.dev) where you can check the status of your agents and see the current queue of jobs.
+The first port of call should be the [Actuated Dashboard](https://dashboard.actuated.com) where you can check the status of your agents and see the current queue of jobs.
 
 For security reasons, an administrator for your GitHub Organisation will need to approve the Actuated Dashboard for access to your organisation before team members will be able to see any data. Send them the link for the dashboard, and have them specifically tick the checkbox for your organisation when logging in for the first time.
 
@@ -90,7 +90,7 @@ Bear in mind that if you set the RAM higher than the default, this may result in
 
 The maximum amount of vCPU that can be set for a single job is 32 vCPU, this is an implementation detail of Firecracker and may change in the future.
 
-To find out exactly how many resources are required, see our [blog post on right sizing with the vmmeter tool](https://actuated.dev/blog/right-sizing-vms-github-actions).
+To find out exactly how many resources are required, see our [blog post on right sizing with the vmmeter tool](https://actuated.com/blog/right-sizing-vms-github-actions).
 
 ## Disk space is running out for a job
 

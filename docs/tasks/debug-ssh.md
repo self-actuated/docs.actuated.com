@@ -43,7 +43,7 @@ Next, trigger a build via the workflow_dispatch event or a git push to the maste
 
 Open `https://$SSH_GATEWAY/list` in your browser and look for your session, you can log in using the SSH command outputted for you.
 
-Alternatively, you can view your own SSH sessions from the [actuated dashboard](https://dashboard.actuated.dev).
+Alternatively, you can view your own SSH sessions from the [actuated dashboard](https://dashboard.actuated.com).
 
 Whenever you have a build that you just can't figure out - or if you want to explore the runner and tune it up to your needs, then you can simply add `- uses: self-actuated/connect-ssh@master` where you want to pause the build.
 

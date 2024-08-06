@@ -9,7 +9,7 @@ actuated is split into three parts:
 All we need you to do is to install our agent on one or more servers, then we take care of the rest. We'll even be able to tell you if your server goes offline for any reason.
 
 !!! info "Have you registered your organisation yet?"
-    Before you can add an agent, you or your GitHub organisation admin will need to install the: [Actuated GitHub App](https://docs.actuated.dev/register/#install-the-github-app).
+    Before you can add an agent, you or your GitHub organisation admin will need to install the: [Actuated GitHub App](https://docs.actuated.com/register/#install-the-github-app).
 
 ### Pick your Actuated Servers
 

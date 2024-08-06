@@ -227,5 +227,5 @@ jobs:
 
 ## Further reading
 
-* From our blog: [Fixing the cache latency for self-hosted GitHub Actions](https://actuated.dev/blog/faster-self-hosted-cache)
+* From our blog: [Fixing the cache latency for self-hosted GitHub Actions](https://actuated.com/blog/faster-self-hosted-cache)
 * A primer on using the GitHub Actions cache: [Using caching in builds](/examples/github-actions-cache/)

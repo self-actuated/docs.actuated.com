@@ -130,7 +130,7 @@ Using QEMU can be slow at times, especially when building an image for Arm using
 
 We found that we could increase an Open Source project's build time by 22x - from ~ 36 minutes to 1 minute 26 seconds.
 
-See also [How to make GitHub Actions 22x faster with bare-metal Arm](https://actuated.dev/blog/native-arm64-for-github-actions)
+See also [How to make GitHub Actions 22x faster with bare-metal Arm](https://actuated.com/blog/native-arm64-for-github-actions)
 
 To build a separate image for Arm on an Arm runner, and one for amd64, you could use a [matrix build](/examples/matrix).
 
