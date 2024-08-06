@@ -1,7 +1,7 @@
 site_name: Actuated
 site_description: Realise the potential of blazingly fast builds.
 site_author: OpenFaaS Ltd
-site_url: https://docs.actuated.dev/
+site_url: https://docs.actuated.com/
 
 # Repository
 repo_name: self-actuated/actuated

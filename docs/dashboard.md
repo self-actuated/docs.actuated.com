@@ -76,12 +76,12 @@ This is where you get to learn who is trigger the most amount of builds, who may
 
 For up to 120 days of history, you can find jobs that have increased over 5 minutes in duration week-by-week. This feature was requested by a team whose builds were roughly 60 minutes each on GitHub's hosted runners, and 20 minutes each on actuated. They didn't want those times to creep up without it being noticed and rectified.
 
-![Insights on outliers](https://actuated.dev/images/2024-03-cncf-update/outliers-top.png)
+![Insights on outliers](https://actuated.com/images/2024-03-cncf-update/outliers-top.png)
 > Insights on outliers showing the time that the job increased by, and a button to drill down into the affected jobs that week.
 
 When you click "Inspect", a plot will be drawn with the maximum build time recorded on the days of the affected week. You can then click "View Job" to see what commit, Pull Request, or configuration change may have caused the increase.
 
-![A plot with the longest job run on each day of the affected week](https://actuated.dev/images/2024-03-cncf-update/detail-plot.png)
+![A plot with the longest job run on each day of the affected week](https://actuated.com/images/2024-03-cncf-update/detail-plot.png)
 > A plot with the longest job run on each day of the affected week
 
 ## SSH Sessions

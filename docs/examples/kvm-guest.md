@@ -94,4 +94,4 @@ The full example is available on [GitHub](https://github.com/skatolo/nested-fire
 
 For more examples and use-cases see:
 
-- [How to run a KVM guest in your GitHub Actions](https://actuated.dev/blog/kvm-in-github-actions)
+- [How to run a KVM guest in your GitHub Actions](https://actuated.com/blog/kvm-in-github-actions)

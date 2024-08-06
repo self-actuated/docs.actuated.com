@@ -92,7 +92,7 @@ Note that if you're running on an Arm server, You'll adapt the prefix of `runs-o
 
 2. Hit commit, and watch the VM boot up.
 
-    You'll be able to see the runners registered for your organisation on the [Actuated Dashboard](https://dashboard.actuated.dev) along with the build queue and stats for the current day's builds.
+    You'll be able to see the runners registered for your organisation on the [Actuated Dashboard](https://dashboard.actuated.com) along with the build queue and stats for the current day's builds.
 
 3. If you're curious
 
