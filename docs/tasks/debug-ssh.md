@@ -10,7 +10,7 @@ Certified for:
 !!! info "Use a private repository if you're not using actuated yet"
     GitHub recommends using a private repository with self-hosted runners because changes can be left over from a previous run, even when using Actions Runtime Controller. Actuated uses an ephemeral VM with an immutable image, so can be used on both public and private repos. Learn why in the [FAQ](/faq).
 
-## Try out the action on your agent
+## Connect to your job via SSH
 
 You'll need to add the `id_token: write` permission to your workflow to use this action. It allows the action to authenticate with the SSH gateway using an [GitHub Actions OIDC token](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect).
 
