@@ -52,3 +52,31 @@ To release the session run `unblock` or `sudo reboot` from the SSH session.
 Watch a demo:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/l9VuQZ4a5pc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Advanced: debug without blocking the build step
+
+If you don't want to block at this build step, but want to connect mid-way through a build, you can do with `block: false` option.
+
+```yaml
+    steps:
+      - uses: self-actuated/connect-ssh@master
+        with:
+          block: false
+```
+
+If you are unable to connect with SSH in time, you can add a short sleep at the end of your build:
+
+```yaml
+jobs:
+  connect:
+    name: connect
+    runs-on: [actuated-8cpu-8gb]
+    steps:
+      - uses: self-actuated/connect-ssh@master
+        with:
+          block: false
+      - run: |
+          echo "Sleep for 5 minutes, since connect-ssh isn't going to block"
+          sleep 500
+```
+
