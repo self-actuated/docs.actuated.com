@@ -58,10 +58,12 @@ Before doing so, you'll need to:
 
 1. Create a file named `hub.txt` in your home directory.
 2. Set the `USERNAME` variable to your Docker Hub username.
+3. If you're using cloud-hypervisor, set the `BRIDGE` variable to `192.168.129.1`
 
 ```bash
 export USERNAME=""
 export TOKEN=$(cat ~/hub.txt)
+export BRIDGE="192.168.128.1"
 
 cat >> /tmp/registry.yml <<EOF
 version: 0.1
@@ -83,13 +85,19 @@ proxy:
   password: $TOKEN
 
 http:
-  addr: 192.168.128.1:5000
+  addr: $BRIDGE:5000
   relativeurls: false
   draintimeout: 60s
-EOF
 
-sudo mv /tmp/registry.yml /etc/registry/config.yml
+  # Enable self-signed TLS from the TLS certificate and key
+  # managed by actuated for server <> microVM communication
+  tls:
+    certificate: /var/lib/actuated/certs/server.crt
+    key: /var/lib/actuated/certs/server.key
+EOF
 ```
+
+As the certificate is expired, actuated will automatically restart the `registry` service to use the new certificate.
 
 Install and start the registry with a systemd unit file:
 
@@ -140,7 +148,7 @@ on:
 
 jobs:
     build:
-        runs-on: [actuated]
+        runs-on: [actuated-4cpu-8gb]
         steps:
 
         - name: Setup mirror
@@ -167,10 +175,17 @@ find /var/lib/registry/ -name "alpine"
 /var/lib/registry/docker/registry/v2/repositories/library/alpine
 ```
 
+Add actuated's bridge <> VM CA bundle to the trust store on the server, to test the registry via curl:
+
+```bash
+sudo cp /var/lib/actuated/certs/ca.crt /usr/local/share/ca-certificates/actuated-ca.crt
+sudo update-ca-certificates
+```
+
 You can also use the registry's API to query which images are available:
 
 ```bash
-curl -i http://192.168.128.1:5000/v2/_catalog
+curl -i https://192.168.128.1:5000/v2/_catalog
 
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
