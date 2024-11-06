@@ -1,4 +1,4 @@
-# Example: Debug a job with SSH
+# Task: Debug a job with SSH
 
 If your it's included within your actuated plan, then you can get a shell into any self-hosted runner - including GitHub's own hosted runners.
 

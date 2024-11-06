@@ -1,4 +1,4 @@
-# Example: Set up a registry mirror
+# Task: Set up a registry mirror
 
 Use-cases:
 

@@ -1,4 +1,4 @@
-# Actuated CLI
+# Task: Manage Actuated via CLI
 
 Monitor Actuated runners and jobs from the command line.
 

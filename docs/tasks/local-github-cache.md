@@ -1,4 +1,4 @@
-# Run a local GitHub Cache
+# Task: Run a local GitHub Cache
 
 The cache for GitHub Actions can speed up CI/CD pipelines. Hosted runners are placed close to the cache which means the latency is very low. Self-hosted runners can also make good use of this cache. Just like caching container images on the host in [a registry mirror](/tasks/registry-mirror/), you can also get a speed boost over the hosted cache by running your own cache directly on the host.
 

@@ -1,4 +1,4 @@
-# Monitoring
+# Task: Monitoring Actuated
 
 !!! info "Our team monitors actuated around the clock, on your behalf"
     The actuated team proactively monitors your servers and build queue for issues. We remediate them on your behalf and for anything cannot be fixed remotely, we'll be in touch via Slack or email.
