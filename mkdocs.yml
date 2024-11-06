@@ -98,6 +98,7 @@ nav:
       - Install the Agent: install-agent.md
       - Run a test build: test-build.md
   - Tasks:
+    - Right Size the VM: tasks/right-size-vm.md
     - Setup a Registry Mirror: tasks/registry-mirror.md
     - Debug a job with SSH: tasks/debug-ssh.md
     - Set-up the CLI: tasks/cli.md

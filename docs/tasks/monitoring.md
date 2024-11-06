@@ -1,9 +1,13 @@
-# Task: Monitoring Actuated
+# Task: Monitoring Your Actuated Usage
 
 !!! info "Our team monitors actuated around the clock, on your behalf"
     The actuated team proactively monitors your servers and build queue for issues. We remediate them on your behalf and for anything cannot be fixed remotely, we'll be in touch via Slack or email.
 
+## Monitoring with the CLI
+
 The [actuated CLI](/tasks/cli) should be used for support, to query the agent's logs, or the logs of individual VMs.
+
+## Monitoring with Grafana
 
 If you would also like to do your own monitoring, you can purchase a monitoring add-on, which will expose metrics for your own Prometheus instance. You can then set up a Grafana dashboard to view the metrics.
 
@@ -14,13 +18,13 @@ The monitoring add-on provides:
 
 To opt-in, follow the instructions in the dashboard.
 
-## Scrape the metrics
+### Scrape the metrics
 
 Metrics are currently made available through [Prometheus](https://prometheus.io/) federation. Prometheus can be run with Docker, as a Kubernetes deployment, or as a standalone binary.
 
 You can add a scrape target to your own Prometheus instance, or you can use the Grafana Agent to do that and ship off the metrics to Grafana Cloud.
 
-Here is a sample scrape config for Prometheus:
+Here is an example sample scrape config for Prometheus:
 
 ```yaml
 scrape_configs:
@@ -34,14 +38,14 @@ scrape_configs:
     scrape_interval: 60s
     scrape_timeout: 5s
     static_configs:
-    - targets: ["tbc:443"]
+    - targets: ["actuated-controlplane.example.com:443"]
 ```
 
 The `bearer_token` is a secret, and unique per customer. Only a bcrypt hash is stored in the control-plane, along with a mapping between GitHub organisations and the token.
 
 The `scrape_interval` must be `60s`, or higher to avoid rate-limiting.
 
-Contact the support team on Slack for the value for the `targets` field.
+The value `actuated-controlplane.example.com` is a placeholder, you can request the endpoint from the actuated team.
 
 ### Control-plane metrics
 
