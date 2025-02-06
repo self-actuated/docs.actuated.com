@@ -119,7 +119,7 @@ For [Fluent Bit](https://twitter.com/alexellisuk/status/1671455406097326080?s=20
     
     Ampere and their partners also offer 1U and 2U servers, along with and [desktop-form workstations](https://www.ipi.wiki/products/ampere-altra-developer-platform) which can be racked or installed in your office.
 
-    The Raspberry Pi 4 also works when used with an external NVMe, and in one instance [was much faster than using emulation with a Hosted GitHub Runner](https://twitter.com/alexellisuk/status/1583092051398524928?s=20&t=2SelTpdc5idJLmayIu3Djw).
+    The Raspberry Pi 4 and 5 also work well when used with an external NVMe, and in one instance [was much faster than using emulation with a Hosted GitHub Runner](https://twitter.com/alexellisuk/status/1583092051398524928?s=20&t=2SelTpdc5idJLmayIu3Djw).
 
 3. Arm VMs with nested virtualisation
 
