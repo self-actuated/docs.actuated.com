@@ -41,9 +41,6 @@ Servers on Hetnzer arrive with a "rescue" system, use it to install Ubuntu 22.04
 
 ### Intel/AMD
 
-!!! info "1000 USD free credit for bare-metal"
-    [Equinix Metal](https://metal.equinix.com/) have partnered with us to offer 1000 USD of credit for new customers to use on actuated. This will cover your usage for one month using an AMD Epyc server. You can request the discount code after purchasing your actuated subscription.
-
 Intel and AMD CPUs can be used interchangeable and are known as `amd64` or `x86_64`.
 
 1. Bare-metal on the cloud (higher cost, convenient, high performance)
@@ -62,7 +59,6 @@ Intel and AMD CPUs can be used interchangeable and are known as `amd64` or `x86_
     - [AWS](https://aws.amazon.com/) - untenable pricing for bare-metal servers
     - [Berry Byte](https://berrybyte.net/dedicated/) - US region available
     - [Cherry Servers](https://www.cherryservers.com/)
-    - [Equinix Metal](https://deploy.equinix.com/) - 500 USD free credit
     - [fasthosts](https://www.fasthosts.co.uk/)
     - [Glesys](https://glesys.com/dedicated) 
     - [Hetzner](https://hetzner.com) - Region: Germany or Finland
@@ -76,8 +72,6 @@ Intel and AMD CPUs can be used interchangeable and are known as `amd64` or `x86_
     You can see a separate [list here](https://github.com/alexellis/awesome-baremetal#bare-metal-cloud).
     
     > A note on Scaleway: [Having tested several of Scaleway bare-metal offerings](https://twitter.com/alexellisuk/status/1605866713815437312?s=20&t=JGh5fGZJWklLTCTVkTVElg), we do not recommend their current generation of bare-metal due to slow I/O and CPU speeds.
-
-    [Equinix Metal](https://deploy.equinix.com/) have partnered with us to offer 500 USD of credit for new customers to use on actuated. You'll get the discount code after signing up with us. We've tested their c3.small.x86 and c2.small.x86 machines, and they are very fast, with enterprise-grade networking and support included, with many different regions available.
 
     Are you on a budget or looking to cut costs? Both [Ionos](https://ionos.co.uk) (UK) and [Hetzner](https://hetzner.com) (Germany) have excellent value, with NVMe storage very fast AMD CPUs available.
     
@@ -119,11 +113,9 @@ For [Fluent Bit](https://twitter.com/alexellisuk/status/1671455406097326080?s=20
     
     Following on from that, you have the [a1.metal](https://aws.amazon.com/ec2/instance-types/a1/) instance on AWS with 16 cores and 30GB / RAM [for roughly 0.4 USD / hour](https://instances.vantage.sh/aws/ec2/a1.metal?region=us-east-1&os=linux&cost_duration=hourly&reserved_term=Standard.noUpfront), and roughly half that cost with a 1x year reservation. The a1.metal is the first generation of Graviton and in our testing with customers came up quite a bit slower than Ampere or Graviton 3. On the plus side, these machines are cheap and if you're already on AWS, it may be easier to start with. GP3 volumes or provisioned concurrency may increase performance over the default of GP2 volumes. Reach out to us for more information.
  
-    For responsive support, faster uplinks, API-provisioning, per-minute billing and enterprise-grade networking, take a look at the c3.large.arm64 (Ampere Altra) from [Equinix Metal](https://metal.equinix.com/). These machines come in at around 2.5 USD / hour, but are packed out with many cores and other benefits. You can usually provision these servers in the Washington DC and Dallas metros. Cloud Native Computing Foundation (CNCF) projects may be able to apply for free credits from Equinix Metal.
-
 2. Arm for on-premises
 
-    For on-premises ARM64 builds, we recommend the Mac Mini M1 (2020) with 16GB RAM and 512GB storage with Asahi Linux. The M2 is unable to run Linux at this time.
+    For on-premises ARM64 builds, we recommend the Mac Mini M1 or M2 with Asahi Linux with 16GB of RAM or more, and 512GB of disk or more.
     
     Ampere and their partners also offer 1U and 2U servers, along with and [desktop-form workstations](https://www.ipi.wiki/products/ampere-altra-developer-platform) which can be racked or installed in your office.
 

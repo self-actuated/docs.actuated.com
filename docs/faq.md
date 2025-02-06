@@ -73,7 +73,7 @@ For an example of what this would look like, see the [inletsctl project README](
 
 ## What kind of machines do I need for the agent?
 
-You'll need either: a bare-metal host (your own machine, Hetzner Dedicated, Equinix Metal, etc), or a VM that supports nested virtualisation such as those provided by OpenStack, GCP, DigitalOcean, Azure, or VMware.
+You'll need either: a bare-metal host (your own machine, Hetzner Dedicated, etc), or a VM that supports nested virtualisation such as those provided by OpenStack, GCP, DigitalOcean, Azure, or VMware.
 
 See also: [Provision a Server section](/provision-server)
 

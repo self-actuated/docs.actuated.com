@@ -40,7 +40,7 @@ We maintain a VM image that is updated regularly through an automated build, so 
 
 Just enable automated updates on your server then install the actuated agent. We'll do the rest including managing efficient allocation across your fleet of servers, and updating the CI image.
 
-And actuated will run your jobs efficiently across a fleet of hosts, or a single machine. They each need to be either bare-metal hosts (think: AWS Metal / Graviton, Equinix Metal, etc), or support nested virtualization (a feature available on GCP and DigitalOcean)
+And actuated will run your jobs efficiently across a fleet of hosts, or a single machine. They each need to be either bare-metal hosts (think: AWS Metal / Graviton, on-premises, etc), or support nested virtualization (a feature available on GCP and DigitalOcean)
 
 ## What people are saying
 
