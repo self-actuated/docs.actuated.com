@@ -56,7 +56,7 @@ The workflow instals Firecracker, configures and boots a guest VM and then waits
     vm-run:
         runs-on: actuated-4cpu-8gb
         steps:
-        - uses: actions/checkout@master
+        - uses: actions/checkout@v4
             with:
             fetch-depth: 1
         - name: Install arkade

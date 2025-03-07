@@ -44,7 +44,7 @@ jobs:
         k3s: [v1.16, v1.17, v1.18, v1.19, v1.20, v1.21, v1.22, v1.23, v1.24, v1.25]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - uses: alexellis/setup-arkade@v2
       - uses: alexellis/arkade-get@master
         with:

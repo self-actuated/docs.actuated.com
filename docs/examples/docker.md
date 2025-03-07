@@ -24,7 +24,7 @@ jobs:
   ping-google:
     runs-on: actuated-4cpu-16gb
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: Run a ping to Google with Docker
@@ -42,7 +42,7 @@ jobs:
   build-in-docker:
     runs-on: actuated-4cpu-16gb
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: Build inlets-connect using Docker

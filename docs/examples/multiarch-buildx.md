@@ -62,7 +62,7 @@ jobs:
 -   runs-on: ubuntu-latest
 +   runs-on: actuated-4cpu-12gb
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 

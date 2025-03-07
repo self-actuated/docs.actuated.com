@@ -35,7 +35,7 @@ Note that if you're running on an Arm server, You'll adapt the prefix of `runs-o
             # runs-on: actuated-arm64-2cpu-8gb
             runs-on: actuated-arm64-2cpu-8gb
             steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v4
             - name: Check specs
               run: |
                 ./specs.sh

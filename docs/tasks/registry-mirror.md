@@ -65,7 +65,7 @@ export USERNAME=""
 export TOKEN=$(cat ~/hub.txt)
 export BRIDGE="192.168.128.1"
 
-cat >> /tmp/registry.yml <<EOF
+cat > /tmp/registry.yml <<EOF
 version: 0.1
 log:
   accesslog:
@@ -155,7 +155,7 @@ jobs:
           uses: self-actuated/hub-mirror@master
 
         - name: Checkout
-            uses: actions/checkout@v2
+            uses: actions/checkout@v4
     
         - name: Pull image using cache
             run: |

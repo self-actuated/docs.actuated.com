@@ -68,7 +68,7 @@ jobs:
     name: specs
     runs-on: actuated-4cpu-12gb
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Check specs
         run: |
           ./specs.sh

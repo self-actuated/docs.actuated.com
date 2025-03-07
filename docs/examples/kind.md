@@ -24,7 +24,7 @@ jobs:
   start-kind:
     runs-on: actuated-4cpu-16gb
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: get arkade
