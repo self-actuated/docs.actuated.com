@@ -10,7 +10,7 @@ In the blog post [Right sizing VMs for GitHub Actions](https://actuated.com/blog
 
 A range of metrics are collected in addition to the standard ones like CPU & RAM consumption, vmmeter also shows contention on I/O, whether a job is running out of disk apce, and how many open files are in use. Non-obvious metrics like entropy and I/O contention are also collected, which can also be linked to degraded performance.
 
-See also: [Custom VM sizes](/custom-vm-size/)
+See also: [Custom VM sizes](/examples/custom-vm-size/)
 
 ## Try it out
 
