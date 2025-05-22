@@ -14,14 +14,19 @@ See also: [Custom VM sizes](/examples/custom-vm-size/)
 
 ## Try it out
 
-Add the following to the top of your worklflow:
+Add the following to the top of your workflow file:
 
-```yaml
-steps:
-# vmmeter start
-        - uses: alexellis/setup-arkade@master
-        - uses: self-actuated/vmmeter-action@master
-# vmmeter end
+```diff
+name: ci
+jobs:
+  my-job-1:
+    name: my-job-1
+    runs-on: actuated-4cpu-12gb
+    steps:
++       # vmmeter start
++       - uses: alexellis/setup-arkade@master
++       - uses: self-actuated/vmmeter-action@master
++       # vmmeter end
 ```
 
 The `vmmeter-action` will run in the background and collect metrics about the job. Its *Post run action* will collect the metrics and upload them to the job's summary.
