@@ -119,6 +119,7 @@ nav:
       - Custom VM sizes: examples/custom-vm-size.md
       - Using caching in builds: examples/github-actions-cache.md
   - Advanced examples:
+    - GPU support in jobs: examples/gpu.md
     - Run a KVM guest: examples/kvm-guest.md
     - Multi-arch images with buildx: examples/multiarch-buildx.md
 
