@@ -103,13 +103,12 @@ Learn more in the [FAQ](faq)
 
 Feel free [to book a call with us](register) if you'd like to understand this comparison in more detail.
 
-| Solution                     | Isolated VM          | Speed       | Efficient spread of jobs | Safely build public repos? | ARM64 support | Maintenance required      | Cost                      |
+| Solution                     | Isolated VM          | Speed       | Efficient spread of jobs | Safely build public repos? | 64-bit Arm support | Maintenance required      | Cost                      |
 |------------------------------|----------------------|-------------|--------------------------|----------------------------|---------------|---------------------------|---------------------------|
-| Hosted runners               | :material-check-all: | Poor        | :material-check-all:     | :material-check-all:       | None          | Free minutes in plan `1` | Per build minute          |
-| actuated                     | :material-check-all: | Bare-metal  | :material-check-all:     | :material-check-all:       | Yes           | Very little               | Fixed monthly cost        |
+| actuated.com                 | :material-check-all: | Bare-metal  | :material-check-all:     | :material-check-all:       | Yes           | Very little               | Fixed monthly cost        |
+| Hosted runners               | :material-check-all: | Poor        | :material-check-all:     | :material-check-all:       | None          | Free minutes in plan `*` | Per build minute          |
 | Standard self-hosted runners | :material-close:     | Good        | :material-close:         | :material-close:           | DIY           | Manual setup and updates  | OSS plus management costs |
-| actions-runtime-controller   | :material-close:     | Varies `2` | :material-close:         | :material-close:           | DIY           | Very involved             | OSS plus management costs |
-
+| actions-runtime-controller   | :material-close:     | Varies `*` | :material-close:         | :material-close:            | DIY           | Very involved             | OSS plus management costs |
 
 > `1` actions-runtime-controller requires use of separate build tools such as Kaniko, which break the developer experience of using `docker` or `docker-compose`. If Docker in Docker (DinD) is used, then there is a severe performance penalty and security risk.
 
