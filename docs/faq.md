@@ -392,7 +392,7 @@ It has both a Software as a Service (SaaS) component ("control plane") aka ("Act
 
 ### Data storage
 
-The control-plane of actuated collects and stores:
+The control-plane of actuated collects and stores the following data in a database hosted and managed by [DigitalOcean LLC](https://www.digitalocean.com/).
 
 * Job events for the organisation where a label of "actuated*" is found, including:
     * Organisation name
@@ -401,6 +401,8 @@ The control-plane of actuated collects and stores:
     * Build name
     * Build start / stop time
     * Build status
+
+Job events are used to schedule queued jobs to servers, to provide technical support, and for insights and reports available within the actuated dashboard.
 
 The following is collected from agents:
 
@@ -414,6 +416,16 @@ In addition, for support requests, we may need to collect the logs of the actuat
 * VMs launched for jobs, stored at `/var/log/actuated/`
 
 This information is required to operate the control plane including scheduling of VMs and for technical support.
+
+**Metrics from servers**
+
+The agent exposes a number of metrics in Prometheus format, which are used by the actuated team to monitor the health and reliability of your servers, which has a 14 day retention policy. This data is stored by [Grafana Labs](https://grafana.com) on their hosted [Grafana Cloud](https://grafana.com/products/cloud/) product:
+
+* Number of jobs runner per server
+* System load average
+* Free RAM
+* Egress counters - i.e. RX/TX bytes
+* Disk usage counters
 
 Upon cancelling a subscription, a customer may request that their data is deleted. In addition, they can uninstall the GitHub App from their organisation, and deactivate the GitHub OAuth application used to authenticate to the Actuated Dashboard.
 
