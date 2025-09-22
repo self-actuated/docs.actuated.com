@@ -32,7 +32,7 @@ For the absolute best value in terms of performance and cost, we recommend the f
 * *x86_64* - [Hetzner's A102](https://www.hetzner.com/dedicated-rootserver/ax102)
 * *Arm64* - [Hetzner's RX170](https://www.hetzner.com/dedicated-rootserver/matrix-rx)
 
-Servers on Hetnzer arrive with a "rescue" system, use it to install Ubuntu 22.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
+Servers on Hetzner arrive with a "rescue" system, use it to install Ubuntu 22.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
 
 ## Our research on servers for actuated
 
