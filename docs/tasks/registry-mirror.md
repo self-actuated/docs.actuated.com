@@ -65,7 +65,7 @@ export USERNAME=""
 export TOKEN=$(cat ~/hub.txt)
 export BRIDGE="192.168.128.1"
 
-cat > /tmp/registry.yml <<EOF
+cat > ./registry-config.yml <<EOF
 version: 0.1
 log:
   accesslog:
@@ -95,6 +95,8 @@ http:
     certificate: /var/lib/actuated/certs/server.crt
     key: /var/lib/actuated/certs/server.key
 EOF
+
+sudo cp ./registry-config.yml /etc/registry/config.yml
 ```
 
 As the certificate is expired, actuated will automatically restart the `registry` service to use the new certificate.
