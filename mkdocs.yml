@@ -53,7 +53,7 @@ extra:
 
 plugins:
   - search
-  
+
 markdown_extensions:
   - attr_list
   - tables
@@ -81,6 +81,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
