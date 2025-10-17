@@ -46,7 +46,7 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
     > Setting up an ARM64 agent? Wherever you see `agent` in a command, change it to: `agent-arm64`. So instead of `agent keygen` you'd run `agent-arm64 keygen`.
 
     Install [arkade](https://github.com/alexellis/arkade) using the command below, or download it from the [releases page](https://github.com/alexellis/arkade/releases).
-    
+
     Download the latest agent and install the binary to `/usr/local/bin/`:
 
     ```bash
@@ -65,21 +65,47 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
 
     **For best performance**, a dedicated drive, volume or partition is required to store the filesystems for running VMs. If you do not have a volume or extra drive attached, then you can shrink the root partition, and use the resulting free space.
 
-    ```bash
-    (
-    cd agent
-    VM_DEV=/dev/nvme0n2 sudo -E ./install.sh
-    )
-    ```
+    Two storage backends are supported. By default the agent uses device mapper. Alternatively the agent can use ZFS volumes within a ZFS pool.
 
-    If you do not have additional storage available at this time, the installer will generate a loopback filesystem for you.
+    === "Devmapper (recommended)"
 
-    ```bash
-    (
-    cd agent
-    sudo -E ./install.sh
-    )
-    ```
+        ```bash
+        (
+        cd agent
+        VM_DEV=/dev/nvme0n2 sudo -E ./install.sh
+        )
+        ```
+
+        If you do not have additional storage available at this time you can omit the `VM_DEV` variable and the installer will generate a loopback filesystem for you.
+
+        ```bash
+        (
+        cd agent
+        sudo -E ./install.sh
+        )
+        ```
+
+    === "ZFS"
+
+        ```bash
+        (
+        cd agent
+        VM_DEV=/dev/nvme0n2 STORAGE=zfs sudo -E ./install.sh
+        )
+        ```
+
+        The install script will create a ZFS pool and dataset for you. If you want to manually setup ZFS or use an existing ZFS pool or dataset see [ZFS Configuration](#installation-options).
+
+        If you do not have additional storage available at this time you can omit the `VM_DEV` variable and the installer will generate a loopback filesystem for you.
+
+        ```bash
+        (
+        cd agent
+        STORAGE=zfs sudo -E ./install.sh
+        )
+        ```
+
+    The disk space allocated to job runners can be configured by setting the `BASE_SIZE` environment variable. The default is `30GB`.
 
 3. Generate your enrollment file
 
@@ -107,52 +133,64 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
 
     Any bootstrap tokens sent to the agent are further encrypted with the agent's public key.
 
-    For hosts with public IPs, you will need to use the built-in TLS provisioning with Let's Encrypt. For hosts behind a firewall, NAT or in a private datacenter, you can use inlets to create a secure tunnel to the agent.
+    For hosts with public IPs, you will need to use the built-in TLS provisioning with Let's Encrypt. For hosts behind a firewall, NAT or in a private datacenter, you can [use inlets](/expose-agent/) to create a secure tunnel to the agent.
 
     We're considering other models for after the pilot, for instance GitHub's own API has the runner make an outbound connection and uses long-polling.
 
-    These steps are for hosts with public IP addresses, if you want to [use inlets](/expose-agent/), jump to the end of this step.
+    === "Expose the agent on the Internet with HTTPS"
 
-    The easiest way to configure everything is to run as root. The --user flag can be used to run under a custom user account, however sudo access is still required for actuated.
+        The easiest way to configure everything is to run as root. The --user flag can be used to run under a custom user account, however sudo access is still required for actuated.
 
-    For an *x86_64* server, run:
+        For an *x86_64* server, run:
 
-    ```bash
-    DOMAIN=agent1.example.com
+        ```bash
+        DOMAIN=agent1.example.com
+        # Replace with "zfs" if you opted for ZFS storage in the installation script.
+        STORAGE=devmapper
 
-    sudo -E agent install-service \
-      --letsencrypt-domain $DOMAIN \
-      --letsencrypt-email webmaster@$DOMAIN
-    ```
+        sudo -E agent install-service \
+          --letsencrypt-domain $DOMAIN \
+          --letsencrypt-email webmaster@$DOMAIN \
+          --storage $STORAGE
+        ```
 
-    For an *Arm* server, run: 
+        For an *Arm* server, run:
 
-    ```bash
-    DOMAIN=agent1.example.com
+        ```bash
+        DOMAIN=agent1.example.com
+        # Replace with "zfs" if you opted for ZFS storage in the installation script.
+        STORAGE=devmapper
 
-    sudo -E agent-arm64 install-service \
-      --letsencrypt-domain $DOMAIN \
-      --letsencrypt-email webmaster@$DOMAIN
-    ```
-    
-    > Note the different binary name: `agent-arm64`
+        sudo -E agent-arm64 install-service \
+          --letsencrypt-domain $DOMAIN \
+          --letsencrypt-email webmaster@$DOMAIN \
+          --storage $STORAGE
+        ```
+
+        > Note the different binary name: `agent-arm64`
+
+    === "Run the agent from a private network"
+
+        For an Actuated Agent behind an [inlets tunnel](https://inlets.dev), do not include the `--letsencrypt-*` flags, and instead add `--listen-addr "127.0.0.1:"`. See [expose the agent with HTTPS](/expose-agent/) for instructions on how the setup inlets.
+
+        The easiest way to configure everything is to run as root. The --user flag can be used to run under a custom user account, however sudo access is still required for actuated
+
+        ```bash
+        # Replace with "zfs" if you opted for ZFS storage in the installation script.
+        STORAGE=devmapper
+
+        sudo -E agent install-service \
+            --listen-addr "127.0.0.1:" \
+            --storage $STORAGE
+        ```
 
     If you need to make changes you can run the command again, or edit `/etc/default/actuated`.
 
     Check the service's status with:
-    
+
     ```bash
     sudo systemctl status actuated
     sudo journalctl -u actuated --since today -f
-    ```
-
-    For an Actuated Agent behind a firewall, or on a private network, do not include the `--letsencrypt-*` flags, and instead add `--listen-addr "127.0.0.1:"`. Then read [expose the agent with HTTPS](/expose-agent/) for details on our private peering option or how to setup an [inlets tunnel](https://inlets.dev/).
-
-    For example (with inlets):
-
-    ```bash
-    sudo -E agent install-service \
-        --listen-addr "127.0.0.1:"
     ```
 
 5. Check that the control-plane is accessible
@@ -170,6 +208,23 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
     We'll let you know once we've added your agent to actuated and then it's over to you to start running your builds.
 
     Once you've run our test build, you need to run the steps for systemd mentioned above.
+
+### Installation options
+
+
+
+| ENV | Description | Default |
+| --- | ----------- | ------- |
+| ZPOOL | Name of the ZFS pool to use or create for ZFS storage. | `actuated_zpool` |
+| ZFS_DATASET | Name of the ZFS dataset to use or create for ZFS . | `${ZPOOL}/snapshots}` |
+
+The install script will automatically try to create a ZFS pool and dataset if you have opted for ZFS storage in the installation script and they do not already exist.
+
+If you have an existing pool or dataset that you want to use or if you want to create them manually you can configure the script to use them
+
+```sh
+STORAGE=zfs ZPOOL=mypool ZFS_DATASET=mypool/actuated sudo ./install.sh
+```
 
 ## Next steps
 
