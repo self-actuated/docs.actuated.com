@@ -21,38 +21,47 @@ Make sure you've read the [Actuated EULA](https://github.com/self-actuated/actua
 
 If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 22.04 as the host operating system on your Server.
 
-## Coming soon: Auto Enrollment
+## Auto Enrollment
 
-We're working on a feature to make setup quicker and easier:
+!!! info "New! Automated agent installation in preview"
 
-* No need to reach out to us about new servers - they enroll themselves via API
-* No more DNS records to manage, or Let's Encrypt
-* Fully automated setup with a single bash script - for userdata, cloud-init, or manual installs via SSH
+    As of Oct 2023, there's a new and automated onboarding experience for Actuated's Agent.
 
-You'll need to obtain an enrollment token from us to use this feature.
+    This is a significant improvement over the previous manual installation process, making it easier and faster to get started with Actuated.
 
-Example to paste into userdata (or manually via SSH):
+    We're running the Auto Enrollment in parallel with the manual process (see next section) while we gather feedback from users.
+
+You'll need to obtain an *Account API Token* to install your agents using this approach.
+
+Enter the following into cloud-init/userdata or run it manually on the server after connecting with SSH:
 
 ```bash
 #!/bin/bash
 
 curl -LSsf https://get.actuated.com | LICENSE="" \
   TOKEN="" \
-  DOCKER_USERNAME="" \
-  DOCKER_PASSWORD="" \
   HOME="/root" bash -
 ```
 
-* `TOKEN` - this is an API token for the enrollment service - reach out and we'll generate this for you
-* `LICENSE` - the key you purchased for actuated
-* `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache. [Create a token here](https://docs.docker.com/security/access-tokens/) or leave empty to cache layers pulled anonymously.
-* `HOME` - the home directory of the user running the script - this is required during userdata since HOME is usually an unset variable.
+Minimum configuration:
+
+* `TOKEN` - your Account API Token - reach out to us and we'll generate one for you
+* `LICENSE` - the key you received when you [purchased an actuated subscription](https://actuated.com/pricing)
+cache layers pulled anonymously
+* `HOME` - Set this only if using cloud-init/userdata - where HOME is usually unset. Otherwise leave it blank and the script will use the current user's home directory.
+
+Additional configuration:
+
+* `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache. [Create a token here](https://docs.docker.com/security/access-tokens/) or leave empty to 
+* `LABELS` - apply a comma-separated list of labels to the agent, e.g. `gce` or `gce,ssd`
+
+Storage configuration:
+
+* `VM_DEV` - a disk or partition to use for VM storage - leave blank for to autodetect a spare disk. If no disk is found, a loopback file will be used.
 
 The installation will guess the best place to store VM snapshots, and if a space disk or partition is found, it will be wiped and formatted.
 
-If the script doesn't find any valid storage, it will provision a loopback file instead which is fine for basic testing. You can specify a specific disk or partition by setting the `VM_DEV` environment variable.
-
-## Install the Actuated Agent
+## Manual Enrollment
 
 !!! info "Do you want a free, expert installation?"
 

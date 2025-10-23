@@ -32,7 +32,7 @@ For the absolute best value in terms of performance and cost, we recommend the f
 * *x86_64* - [Hetzner's A102](https://www.hetzner.com/dedicated-rootserver/ax102)
 * *Arm64* - [Hetzner's RX170](https://www.hetzner.com/dedicated-rootserver/matrix-rx)
 
-Servers on Hetnzer arrive with a "rescue" system, use it to install Ubuntu 22.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
+Hetzner machines come with a "rescue" system, use it to install Ubuntu 22.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
 
 ## Our research on servers for actuated
 
@@ -81,7 +81,11 @@ Intel and AMD CPUs can be used interchangeable and are known as `amd64` or `x86_
 
     This option may not have the raw speed and throughput of a dedicated, bare-metal host, but keeps costs low and is convenient for getting started.
 
-    We know of at least three providers which have options for nested virtualisation: [DigitalOcean](https://m.do.co/c/8d4e75e9886f), [Google Compute Platform (GCP)](https://cloud.google.com/compute) (new customers get 300 USD free credits from GCP) support nested virtualisation on their Virtual Machines (VMs), and [Azure](https://azure.com/).
+    We know of at least three providers which have options for nested virtualisation: [DigitalOcean](https://m.do.co/c/8d4e75e9886f), [Google Compute Platform (GCP)](https://cloud.google.com/compute) (new customers get 300 USD free credits from GCP) support nested virtualisation on their Virtual Machines (VMs), and [Azure](https://azure.com/).'
+
+    Nested Virtualisation is enabled by default on most clouds, however on GCP you will need to enable it via the `--enable-nested-virtualization` flag when creating a VM via `gcloud` CLI or API. This option is not listed in the GCP's web console.
+
+    If your only option is to use AWS EC2 VMs, then we can help you get up and running using Firecracker with KVM backed by Pagetable Isolation, [learn more here](https://blog.alexellis.io/how-to-run-firecracker-without-kvm-on-regular-cloud-vms/). 
 
 3. Bare-metal on-premises (cheap, convenient, high performance)
 
