@@ -83,7 +83,7 @@ Intel and AMD CPUs can be used interchangeable and are known as `amd64` or `x86_
 
     We know of at least three providers which have options for nested virtualisation: [DigitalOcean](https://m.do.co/c/8d4e75e9886f), [Google Compute Platform (GCP)](https://cloud.google.com/compute) (new customers get 300 USD free credits from GCP) support nested virtualisation on their Virtual Machines (VMs), and [Azure](https://azure.com/).'
 
-    Nested Virtualisation is enabled by default on most clouds, however on GCP you will need to enable it via the `--enable-nested-virtualization` flag when creating a VM via `gcloud` CLI or API. This option is not listed in the GCP's web console.
+    Nested Virtualisation is enabled by default on most clouds, however on GCP you will need to enable it via the `--enable-nested-virtualization` flag when creating a VM via `gcloud` CLI or API. This option is not listed in the GCP's web console. [Learn more](https://cloud.google.com/compute/docs/instances/nested-virtualization/enabling)
 
     If your only option is to use AWS EC2 VMs, then we can help you get up and running using Firecracker with KVM backed by Pagetable Isolation, [learn more here](https://blog.alexellis.io/how-to-run-firecracker-without-kvm-on-regular-cloud-vms/). 
 
