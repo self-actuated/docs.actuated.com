@@ -45,7 +45,7 @@ curl -LSsf https://get.actuated.com | LICENSE="" \
 
 * `TOKEN` - this is an API token for the enrollment service - reach out and we'll generate this for you
 * `LICENSE` - the key you purchased for actuated
-* `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache - leave these empty to cache with anonymous pulls
+* `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache. [Create a token here](https://docs.docker.com/security/access-tokens/) or leave empty to cache layers pulled anonymously.
 * `HOME` - the home directory of the user running the script - this is required during userdata since HOME is usually an unset variable.
 
 The installation will guess the best place to store VM snapshots, and if a space disk or partition is found, it will be wiped and formatted.
