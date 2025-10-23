@@ -21,6 +21,35 @@ Make sure you've read the [Actuated EULA](https://github.com/self-actuated/actua
 
 If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 22.04 as the host operating system on your Server.
 
+## Coming soon: Auto Enrollment
+
+We're working on a feature to make setup quicker and easier:
+
+* No need to reach out to us about new servers - they enroll themselves via API
+* No more DNS records to manage, or Let's Encrypt
+* Fully automated setup with a single bash script - for userdata, cloud-init, or manual installs via SSH
+
+You'll need to obtain an enrollment token from us to use this feature.
+
+Example to paste into userdata (or manually via SSH):
+
+```bash
+#!/bin/bash
+
+curl -LSsf https://get.actuated.com |   LICENSE="" \
+  DOCKER_USERNAME="" \
+  DOCKER_PASSWORD="" \
+  HOME="/root" bash -
+```
+
+* `LICENSE` - the key you purchased for actuated
+* `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache - leave these empty to cache with anonymous pulls
+* `HOME` - the home directory of the user running the script - this is required during userdata since HOME is usually an unset variable.
+
+The installation will guess the best place to store VM snapshots, and if a space disk or partition is found, it will be wiped and formatted.
+
+If the script doesn't find any valid storage, it will provision a loopback file instead which is fine for basic testing. You can specify a specific disk or partition by setting the `VM_DEV` environment variable.
+
 ## Install the Actuated Agent
 
 !!! info "Do you want a free, expert installation?"
