@@ -219,23 +219,6 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
 
     Once you've run our test build, you need to run the steps for systemd mentioned above.
 
-### Installation options
-
-
-
-| ENV | Description | Default |
-| --- | ----------- | ------- |
-| ZPOOL | Name of the ZFS pool to use or create for ZFS storage. | `actuated_zpool` |
-| ZFS_DATASET | Name of the ZFS dataset to use or create for ZFS . | `${ZPOOL}/snapshots}` |
-
-The install script will automatically try to create a ZFS pool and dataset if you have opted for ZFS storage in the installation script and they do not already exist.
-
-If you have an existing pool or dataset that you want to use or if you want to create them manually you can configure the script to use them
-
-```sh
-STORAGE=zfs ZPOOL=mypool ZFS_DATASET=mypool/actuated sudo ./install.sh
-```
-
 ## Next steps
 
 You can now start your first build and see it run on your actuated agent.
@@ -283,3 +266,32 @@ You will need the following ports open:
 We do not recommend restricting outgoing traffic on the server as this will probably cause you issues with your builds.
 
 See also: [Troubleshooting your agent](/troubleshooting)
+
+### Installation options for the `install.sh` script
+
+When no options are given, all the defaults are assumed, which uses devmapper with a loopback file for VM storage, which is suitable for basic exploration or light use.
+
+Dedicated disks or partitions with devmapper or ZFS is recommended for production use.
+
+General options:
+
+| ENV | Description | Default |
+| --- | ----------- | ------- |
+| `VM_DEV` | Disk or partition to use for VM storage. If omitted a loopback file will be created. | `""` |
+| `STORAGE` | Storage backend to use for VM storage. Options are `devmapper` or `zfs`. | `devmapper` |
+| `BASE_SIZE` | Base size of each VM filesystem. | `30GB` |
+
+ZFS-specific options:
+
+| ENV | Description | Default |
+| --- | ----------- | ------- |
+| `ZPOOL` | Name of the ZFS pool to use or create for ZFS storage. | `actuated_zpool` |
+| `ZFS_DATASET` | Name of the ZFS dataset to use or create for ZFS . | `${ZPOOL}/snapshots}` |
+
+The install script will automatically try to create a ZFS pool and dataset if you have opted for ZFS storage in the installation script and they do not already exist.
+
+If you have an existing pool or dataset that you want to use or if you want to create them manually you can configure the script to use them
+
+```sh
+STORAGE=zfs ZPOOL=mypool ZFS_DATASET=mypool/actuated sudo ./install.sh
+```
