@@ -36,12 +36,14 @@ Example to paste into userdata (or manually via SSH):
 ```bash
 #!/bin/bash
 
-curl -LSsf https://get.actuated.com |   LICENSE="" \
+curl -LSsf https://get.actuated.com | LICENSE="" \
+  TOKEN="" \
   DOCKER_USERNAME="" \
   DOCKER_PASSWORD="" \
   HOME="/root" bash -
 ```
 
+* `TOKEN` - this is an API token for the enrollment service - reach out and we'll generate this for you
 * `LICENSE` - the key you purchased for actuated
 * `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache - leave these empty to cache with anonymous pulls
 * `HOME` - the home directory of the user running the script - this is required during userdata since HOME is usually an unset variable.
