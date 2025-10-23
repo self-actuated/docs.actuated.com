@@ -61,13 +61,17 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
     )
     ```
 
-    Run the setup.sh script which will install all the required dependencies like containerd, CNI and Firecracker.
+    The install.sh script installs required dependencies such as: containerd, CNI plugins, and the Firecracker binary.
 
     **For best performance**, a dedicated drive, volume or partition is required to store the filesystems for running VMs. If you do not have a volume or extra drive attached, then you can shrink the root partition, and use the resulting free space.
 
-    Two storage backends are supported. By default the agent uses device mapper. Alternatively the agent can use ZFS volumes within a ZFS pool.
+    Two storage backends are supported. By default the agent uses [Device mapper](https://en.wikipedia.org/wiki/Device_mapper). Alternatively the agent can use ZFS volumes within a ZFS pool.
+
+    The disk space allocated to job runners can be configured by setting the `BASE_SIZE` environment variable. The default is `30GB` which is generally sufficient for most teams.
 
     === "Devmapper (recommended)"
+
+        The `VM_DEV` variable should be set with a disk or partition that can be formatted for VM storage.
 
         ```bash
         (
@@ -75,6 +79,8 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
         VM_DEV=/dev/nvme0n2 sudo -E ./install.sh
         )
         ```
+
+    === "Devmapper loopback"
 
         If you do not have additional storage available at this time you can omit the `VM_DEV` variable and the installer will generate a loopback filesystem for you.
 
@@ -85,7 +91,13 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
         )
         ```
 
+        The default size of the loopback file is `200GB` which is stored at `/var/lib/containerd/devmapper`.
+
     === "ZFS"
+
+        The script will create a ZFS pool and dataset for you. If you want to manually setup ZFS or use an existing ZFS pool or dataset see [ZFS Configuration](#installation-options).
+
+        The `VM_DEV` variable should be set with a disk or partition that can be formatted for ZFS storage.
 
         ```bash
         (
@@ -94,7 +106,7 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
         )
         ```
 
-        The install script will create a ZFS pool and dataset for you. If you want to manually setup ZFS or use an existing ZFS pool or dataset see [ZFS Configuration](#installation-options).
+    === "ZFS loopback"
 
         If you do not have additional storage available at this time you can omit the `VM_DEV` variable and the installer will generate a loopback filesystem for you.
 
@@ -104,8 +116,6 @@ If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 2
         STORAGE=zfs sudo -E ./install.sh
         )
         ```
-
-    The disk space allocated to job runners can be configured by setting the `BASE_SIZE` environment variable. The default is `30GB`.
 
 3. Generate your enrollment file
 
