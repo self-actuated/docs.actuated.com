@@ -62,6 +62,13 @@ Storage configuration:
 
 The installation will guess the best place to store VM snapshots, and if a space disk or partition is found, it will be wiped and formatted.
 
+Notes on Autoenrolled Agent lifecycle:
+
+* They appear immediately in the Actuated Dashboard, and via the `actuated-cli runners` command.
+* Any Autoenrolled agent that has been offline for 15 minutes will be removed automatically.
+
+The Actuated Dashboard has instructions for installing the CLI.
+
 ## Manual Enrollment
 
 !!! info "Do you want a free, expert installation?"
