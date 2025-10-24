@@ -54,10 +54,11 @@ Additional configuration:
 
 * `DOCKER_USERNAME` and `DOCKER_PASSWORD` - your Docker Hub credentials for the pull-through cache. [Create a token here](https://docs.docker.com/security/access-tokens/) or leave empty to 
 * `LABELS` - apply a comma-separated list of labels to the agent, e.g. `gce` or `gce,ssd`
+* `SAN` - use this option if autodetecting the host's IP address is not working properly, add `SAN=$(curl -sfSL https://checkip.amazonaws.com)` as an extra environment variable
 
 Storage configuration:
 
-* `VM_DEV` - a disk or partition to use for VM storage - leave blank for to autodetect a spare disk. If no disk is found, a loopback file will be used.
+* `VM_DEV` - a disk or partition to use for VM storage - leave blank for to autodetect a spare disk. If no disk is found, a loopback file will be used. If the wrong disk is being detected, you may need to wipe any existing filesystem signatures first with `wipefs -a /dev/sdX`. Or, just specify the `VM_DEV` variable manually after having logged in and run `lsblk`.
 
 The installation will guess the best place to store VM snapshots, and if a space disk or partition is found, it will be wiped and formatted.
 
