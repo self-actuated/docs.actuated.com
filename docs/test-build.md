@@ -32,8 +32,15 @@ Note that if you're running on an Arm server, You'll adapt the prefix of `runs-o
     jobs:
         specs:
             name: specs
+            # Most builds run on x86_64
+            runs-on: actuated-2cpu-8gb
+
+            # For Arm:
             # runs-on: actuated-arm64-2cpu-8gb
-            runs-on: actuated-arm64-2cpu-8gb
+
+            # To pick any kind of server
+            # runs-on: actuated-any-2cpu-8gb
+
             steps:
             - uses: actions/checkout@v4
             - name: Check specs
