@@ -109,10 +109,14 @@ If a job has been retried for 30 minutes, without a runner to take it, it'll be 
 
 Run sparingly because it will launch one VM per job queued.
 
+Do not run it multiple times in succession. And then if you are still in doubt where jobs are stuck - first check the logs of the runners via `actuated-cli agent-logs`, finally, reach out to support.
+
 ```bash
 actuated-cli repair \
     actuated-samples
 ```
+
+In the above command `actuated-samples` is the GitHub organization.
 
 ## Rescue a remote server
 
