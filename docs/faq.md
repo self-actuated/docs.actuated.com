@@ -348,9 +348,7 @@ It is possible to launch a Virtual Machine (VM) with KVM from within a Firecrack
 
 Use-cases may include: building and snapshotting VM images, running Packer, launching VirtualBox and Vagrant, accelerating the Android emulator, building packages for NixOS and other testing which requires KVM.
 
-It's disabled by default, but you can opt-in to the feature by following the steps in this article:
-
-[How to run a KVM guest in your GitHub Actions](https://actuated.com/blog/kvm-in-github-actions)
+Follow an example build that uses Firecracker within a GitHub Action: [How to run a KVM guest in your GitHub Actions](https://actuated.com/blog/kvm-in-github-actions)
 
 At time of writing, only Intel and AMD CPUs support nested virtualisation.
 
