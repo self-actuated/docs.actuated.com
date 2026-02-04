@@ -1,0 +1,2368 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Realise the potential of blazingly fast builds.">
+      
+      
+        <meta name="author" content="OpenFaaS Ltd">
+      
+      
+        <link rel="canonical" href="https://docs.actuated.com/faq/">
+      
+      
+        <link rel="prev" href="../dashboard/">
+      
+      
+        <link rel="next" href="../roadmap/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>FAQ - Actuated</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Helvetica:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Helvetica";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-PTK21TFJ7V"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-PTK21TFJ7V",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-PTK21TFJ7V",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frequently-asked-questions-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Actuated" class="md-header__button md-logo" aria-label="Actuated" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Actuated
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/self-actuated" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    self-actuated/actuated
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Actuated" class="md-nav__button md-logo" aria-label="Actuated" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Actuated
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/self-actuated" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    self-actuated/actuated
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-actuated-compare-to-a-self-hosted-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does actuated compare to a self-hosted runner?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-is-actuated-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is actuated for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-a-sponsored-subscription-for-open-source-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there a sponsored subscription for Open Source projects?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kind-of-machines-do-i-need-for-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What kind of machines do I need for the agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-will-jenkins-gitlab-ci-bitbucket-pipeline-runners-drone-or-azure-devops-be-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      When will Jenkins, GitLab CI, BitBucket Pipeline Runners, Drone or Azure DevOps be supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-github-enterprise-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is GitHub Enterprise supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kind-of-access-is-required-to-my-github-organisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What kind of access is required to my GitHub Organisation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-githubs-self-hosted-runner-be-used-on-public-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can GitHub's self-hosted runner be used on public repos?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-use-the-containers-feature-of-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use the containers feature of GitHub Actions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-many-builds-does-a-single-actuated-vm-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      How many builds does a single actuated VM run?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-are-vms-scheduled" class="md-nav__link">
+    <span class="md-ellipsis">
+      How are VMs scheduled?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-i-need-to-auto-scale-the-actuated-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to auto-scale the Actuated Servers?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-i-need-to-change-in-my-workflows-to-use-actuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to change in my workflows to use actuated?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-64-bit-arm-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is 64-bit Arm supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-in-the-vm-image-and-how-is-it-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's in the VM image and how is it built?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kernel-version-is-being-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Kernel version is being used?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Kernel version is being used?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-are-the-kernel-headers-includes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where are the Kernel headers / includes?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-kernel-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is the Kernel configuration?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-easy-is-it-to-debug-a-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      How easy is it to debug a runner?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-an-actuated-runner-get-iam-permissions-for-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can an actuated runner get IAM permissions for AWS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-to-other-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison to other solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison to other solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-actuated-compare-to-a-actions-runtime-controller-arc" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does actuated compare to a actions-runtime-controller (ARC)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doesnt-kaniko-fix-all-this-for-arc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doesn't Kaniko fix all this for ARC?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-we-need-to-run-my-actuated-servers-247" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do we need to run my Actuated Servers 24/7?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-gpu-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there GPU support?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-virtual-machines-be-launched-within-a-github-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Virtual Machines be launched within a GitHub Action?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-use-a-vm-for-an-actuated-server-instead-of-bare-metal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use a VM for an actuated server instead of bare-metal?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-windows-or-macos-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Windows or MacOS supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-actuated-free-and-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Actuated free and open-source?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-a-risk-that-we-could-get-locked-in-to-actuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there a risk that we could get "locked-in" to actuated?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-the-brand-called-actuated-and-selfactuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the brand called "actuated" and "selfactuated"?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-policy-data-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy policy &amp; data security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy policy & data security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-security-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data security &amp; encryption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-development-life-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Development Life Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-information-available-to-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Information Available to Customers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability-and-uptime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability and uptime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Onboarding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Onboarding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../register/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Register your GitHub Organisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provision-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provision a Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install the Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run a test build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/right-size-vm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Right Size the VM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/registry-mirror/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup a Registry Mirror
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/debug-ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debug a job with SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up the CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/local-github-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup self-hosted cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/system-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/kernel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compile a Kernel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/k3s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes with K3s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/kind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes with KinD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/matrix-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes regression matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker run/build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/openfaas-publish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publish an OpenFaaS function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/openfaas-helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a Helm chart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/custom-vm-size/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom VM sizes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/github-actions-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using caching in builds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Advanced examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support in jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/kvm-guest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run a KVM guest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/multiarch-buildx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-arch images with buildx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-actuated-compare-to-a-self-hosted-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does actuated compare to a self-hosted runner?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-is-actuated-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is actuated for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-a-sponsored-subscription-for-open-source-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there a sponsored subscription for Open Source projects?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kind-of-machines-do-i-need-for-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What kind of machines do I need for the agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-will-jenkins-gitlab-ci-bitbucket-pipeline-runners-drone-or-azure-devops-be-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      When will Jenkins, GitLab CI, BitBucket Pipeline Runners, Drone or Azure DevOps be supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-github-enterprise-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is GitHub Enterprise supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kind-of-access-is-required-to-my-github-organisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What kind of access is required to my GitHub Organisation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-githubs-self-hosted-runner-be-used-on-public-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can GitHub's self-hosted runner be used on public repos?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-use-the-containers-feature-of-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use the containers feature of GitHub Actions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-many-builds-does-a-single-actuated-vm-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      How many builds does a single actuated VM run?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-are-vms-scheduled" class="md-nav__link">
+    <span class="md-ellipsis">
+      How are VMs scheduled?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-i-need-to-auto-scale-the-actuated-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to auto-scale the Actuated Servers?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-i-need-to-change-in-my-workflows-to-use-actuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to change in my workflows to use actuated?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-64-bit-arm-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is 64-bit Arm supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-in-the-vm-image-and-how-is-it-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's in the VM image and how is it built?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kernel-version-is-being-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Kernel version is being used?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Kernel version is being used?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-are-the-kernel-headers-includes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where are the Kernel headers / includes?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-kernel-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is the Kernel configuration?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-easy-is-it-to-debug-a-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      How easy is it to debug a runner?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-an-actuated-runner-get-iam-permissions-for-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can an actuated runner get IAM permissions for AWS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-to-other-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison to other solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison to other solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-actuated-compare-to-a-actions-runtime-controller-arc" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does actuated compare to a actions-runtime-controller (ARC)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doesnt-kaniko-fix-all-this-for-arc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doesn't Kaniko fix all this for ARC?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-we-need-to-run-my-actuated-servers-247" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do we need to run my Actuated Servers 24/7?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-gpu-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there GPU support?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-virtual-machines-be-launched-within-a-github-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Virtual Machines be launched within a GitHub Action?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-use-a-vm-for-an-actuated-server-instead-of-bare-metal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use a VM for an actuated server instead of bare-metal?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-windows-or-macos-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Windows or MacOS supported?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-actuated-free-and-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Actuated free and open-source?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-a-risk-that-we-could-get-locked-in-to-actuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there a risk that we could get "locked-in" to actuated?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-the-brand-called-actuated-and-selfactuated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the brand called "actuated" and "selfactuated"?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-policy-data-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy policy &amp; data security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy policy & data security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-security-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data security &amp; encryption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-development-life-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Development Life Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-information-available-to-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Information Available to Customers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability-and-uptime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability and uptime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permanent link">&para;</a></h1>
+<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
+<p>Actuated has three main parts:</p>
+<ol>
+<li>an agent which knows how to run VMs, you install this on your hosts</li>
+<li>a VM image and Kernel that we build which has everything required for Docker, KinD and K3s</li>
+<li>a multi-tenant control plane that we host, which tells your agents to start VMs and register a runner on your GitHub organisation</li>
+</ol>
+<p>The multi-tenant control plane is run and operated by OpenFaaS Ltd as a SaaS.</p>
+<p><img alt="Conceptual flow of starting up a new ephemeral runner" src="../images/conceptual.png" /></p>
+<blockquote>
+<p>The conceptual overview showing how a MicroVM is requested by the control plane.</p>
+</blockquote>
+<p>MicroVMs are only started when needed, and are registered with GitHub by the official GitHub Actions runner, using a short-lived registration token. The token is been encrypted with the public key of the agent. This ensures no other agent could use the token to bootstrap a token to the wrong organisation.</p>
+<p>Learn more: <a href="https://docs.github.com/en/rest/actions/self-hosted-runners#create-a-registration-token-for-an-organization">Self-hosted GitHub Actions API</a></p>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>MicroVM</code> - a lightweight, single-use VM that is created by the Actuated Agent, and is destroyed after the build is complete. Common examples include <a href="https://firecracker-microvm.github.io/">firecracker by AWS</a> and <a href="https://github.com/cloud-hypervisor/cloud-hypervisor">Cloud Hypervisor</a></li>
+<li><code>Guest Kernel</code> - a Linux kernel that is used together with a Root filesystem to boot a MicroVM and run your CI workloads</li>
+<li><code>Root filesystem</code> - an immutable image maintained by the actuated team containing all necessary software to perform a build</li>
+<li><code>Actuated</code> ('Control Plane') - a multi-tenant SaaS run by the actuated team responsible for scheduling MicroVMs to the Actuated Agent </li>
+<li><code>Actuated Agent</code> - the software component installed on your Server which runs a MicroVM when instructed by Actuated</li>
+<li><code>Actuated Server</code> ('Server') - a server on which the Actuated Agent has been installed, where your builds will execute.</li>
+</ul>
+<h2 id="how-does-actuated-compare-to-a-self-hosted-runner">How does actuated compare to a self-hosted runner?<a class="headerlink" href="#how-does-actuated-compare-to-a-self-hosted-runner" title="Permanent link">&para;</a></h2>
+<p>A self-hosted runner is a machine on which you've installed and registered the a GitHub runner.</p>
+<p>Quite often these machines suffer from some, if not all of the following issues:</p>
+<ul>
+<li>They require several hours to get all the required packages correctly installed to mirror a hosted runner</li>
+<li>You never update them out of fear of wasting time or breaking something which is working, meaning your supply chain is at risk</li>
+<li>Builds clash, if you're building a container image, or running a KinD cluster, names will clash, dirty state will be left over</li>
+</ul>
+<p>We've heard in user interviews that the final point of dirty state can cause engineers to waste several days of effort chasing down problems.</p>
+<p>Actuated uses a one-shot VM that is destroyed immediately after a build is completed.</p>
+<h2 id="who-is-actuated-for">Who is actuated for?<a class="headerlink" href="#who-is-actuated-for" title="Permanent link">&para;</a></h2>
+<p>actuated is primarily for software engineering teams who are currently using GitHub Actions or GitLab CI.</p>
+<ul>
+<li>You can outsource your CI infrastructure to the actuated team</li>
+<li>You'll get VM-level isolation, with no risks of side-effects between builds</li>
+<li>You can run on much faster hardware</li>
+<li>You'll get insights on how to fine-tune the performance of your builds</li>
+<li>And save a significant amount of money vs. larger hosted runners if you use 10s or 100s of thousands of minutes per month</li>
+</ul>
+<p>For GitHub users, a GitHub organisation is required for installation, and runners are attached to individual repositories as required to execute builds.</p>
+<h2 id="is-there-a-sponsored-subscription-for-open-source-projects">Is there a sponsored subscription for Open Source projects?<a class="headerlink" href="#is-there-a-sponsored-subscription-for-open-source-projects" title="Permanent link">&para;</a></h2>
+<p>We have a sponsored program with the CNCF and Ampere for various Open Source projects, you can find out more here: <a href="https://actuated.com/blog/arm-ci-cncf-ampere">Announcing managed Arm CI for CNCF projects</a>.</p>
+<p>Sponsored projects are required to <a href="/images/actuated-badge.png">add our GitHub badge</a> to the top of their README file for each repository where the actuated is being used, along with any other GitHub badges such as build status, code coverage, etc.</p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">![Arm CI sponsored by Actuated</span>](<span class="na">https://img.shields.io/badge/SA_actuated.com-004BDD</span>)](https://actuated.com/)
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://actuated.com/&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Arm CI sponsored by Actuated&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://docs.actuated.com/images/actuated-badge.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;120px&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>For an example of what this would look like, see the <a href="https://github.com/inlets/inletsctl">inletsctl project README</a>.</p>
+<h2 id="what-kind-of-machines-do-i-need-for-the-agent">What kind of machines do I need for the agent?<a class="headerlink" href="#what-kind-of-machines-do-i-need-for-the-agent" title="Permanent link">&para;</a></h2>
+<p>You'll need either: a bare-metal host (your own machine, Hetzner Dedicated, etc), or a VM that supports nested virtualisation such as those provided by OpenStack, GCP, DigitalOcean, Azure, or VMware.</p>
+<p>See also: <a href="/provision-server">Provision a Server section</a></p>
+<h2 id="when-will-jenkins-gitlab-ci-bitbucket-pipeline-runners-drone-or-azure-devops-be-supported">When will Jenkins, GitLab CI, BitBucket Pipeline Runners, Drone or Azure DevOps be supported?<a class="headerlink" href="#when-will-jenkins-gitlab-ci-bitbucket-pipeline-runners-drone-or-azure-devops-be-supported" title="Permanent link">&para;</a></h2>
+<p>Support for GitHub Actions and GitLab CI is available.</p>
+<p>Unfortunately, other CI systems tend to expect runners to be available indefinitely, which is an anti-pattern. Why? They gather side-effects and often rely on the insecure use of Docker in Docker, privileged containers, or mounting the Docker socket.</p>
+<p>If you'd like to migrate to GitHub Actions, or GitLab CI, feel free to reach out to us for help.</p>
+<h2 id="is-github-enterprise-supported">Is GitHub Enterprise supported?<a class="headerlink" href="#is-github-enterprise-supported" title="Permanent link">&para;</a></h2>
+<p>GitHub.com's Pro, Team and Enterprise Cloud plans are supported.</p>
+<p><a href="https://docs.github.com/en/enterprise-server@3.5/admin/overview/about-github-enterprise-server">GitHub Enterprise Server (GHES)</a> is a self-hosted version of GitHub and requires additional onboarding steps. Please reach out to us if you're interested in using actuated with your installation of GHES.</p>
+<h2 id="what-kind-of-access-is-required-to-my-github-organisation">What kind of access is required to my GitHub Organisation?<a class="headerlink" href="#what-kind-of-access-is-required-to-my-github-organisation" title="Permanent link">&para;</a></h2>
+<p>GitHub Apps provide fine-grained privileges, access control, and event data.</p>
+<p>Actuated integrates with GitHub using a <a href="https://docs.github.com/en/developers/apps/getting-started-with-apps/about-apps">GitHub App</a>.</p>
+<p>The actuated GitHub App will request:</p>
+<ul>
+<li>Administrative access to add/remove GitHub Actions Runners to individual repositories</li>
+<li>Events via webhook for Workflow Runs and Workflow Jobs</li>
+</ul>
+<p>Did you know? The actuated service <strong>does not have any access to your code</strong> or private or public repositories.</p>
+<h2 id="can-githubs-self-hosted-runner-be-used-on-public-repos">Can GitHub's self-hosted runner be used on public repos?<a class="headerlink" href="#can-githubs-self-hosted-runner-be-used-on-public-repos" title="Permanent link">&para;</a></h2>
+<p>Actuated VMs can be used with public repositories, however the standard self-hosted runner when used stand-alone, with Docker, or with Kubernetes cannot.</p>
+<p>The GitHub team recommends only running their self-hosted runners on private repositories.</p>
+<p>Why?</p>
+<p>I took some time to ask one of the engineers on the GitHub Actions team.</p>
+<blockquote>
+<p>With the standard self-hosted runner, a bad actor could compromise the system or install malware leaving side-effects for future builds.</p>
+</blockquote>
+<p>He replied that it's difficult for maintainers to secure their repos and workflows, and that bad actors could compromise a runner host due to the way they run multiple jobs, and are not a fresh environment for each build. It may even be because a bad actor could scan the local network of the runner and attempt to gain access to other systems.</p>
+<p>If you're wondering whether containers and Pods are a suitable isolation level, we would recommend against this since it usually involves one of either: mounting a docker socket (which can lead to escalation to root on the host) or running Docker In Docker (DIND) which requires a privileged container (which can lead to escalation to root on the host).</p>
+<p>So, can you use actuated on a public repo?</p>
+<p>Our contact at GitHub stated that through VM-level isolation and an immutable VM image, the primary concerns is resolved, because there is no way to have state left over or side effects from previous builds.</p>
+<p>Actuated fixes the isolation problem, and prevents side-effects between builds. We also have specific iptables rules in the <a href="/troubleshooting">troubleshooting guide</a> which will isolate your runners from the rest of the network.</p>
+<h2 id="can-i-use-the-containers-feature-of-github-actions">Can I use the containers feature of GitHub Actions?<a class="headerlink" href="#can-i-use-the-containers-feature-of-github-actions" title="Permanent link">&para;</a></h2>
+<p>Yes, it is supported, however it is not required, and may make it harder to debug your builds. We prefer and recommend running on the host directly, which gives better performance and a simpler experience. Common software and packages are already within the root filesystem, and can be added with <code>setup-X</code> actions, or <code>arkade get</code> or <code>arkade system install</code>.</p>
+<p>GitHub Action's <a href="https://docs.github.com/en/actions/using-jobs/running-jobs-in-a-container">Running jobs in a container</a> feature is supported, as is Docker, Buildx, Kubernetes, KinD, K3s, eBPF, etc.</p>
+<p>Example of running commands with the <code>docker.io/node:latest</code> image.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">specs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actuated-4cpu-12gb</span>
+<span class="w">    </span><span class="nt">container</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker.io/node:latest</span>
+<span class="w">      </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">NODE_ENV</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development</span>
+<span class="w">      </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--cpus 1</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check for dockerenv file</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node --version</span>
+</code></pre></div>
+<h2 id="how-many-builds-does-a-single-actuated-vm-run">How many builds does a single actuated VM run?<a class="headerlink" href="#how-many-builds-does-a-single-actuated-vm-run" title="Permanent link">&para;</a></h2>
+<p>When a VM starts up, it runs the GitHub Actions Runner ephemeral (aka one-shot) mode, so in can run at most one build. After that, the VM will be destroyed.</p>
+<p>See also: <a href="https://docs.github.com/en/actions/hosting-your-own-runners/autoscaling-with-self-hosted-runners#using-ephemeral-runners-for-autoscaling">GitHub: ephemeral runners</a></p>
+<h2 id="how-are-vms-scheduled">How are VMs scheduled?<a class="headerlink" href="#how-are-vms-scheduled" title="Permanent link">&para;</a></h2>
+<p>VMs are placed efficiently across your Actuated Servers using a scheduling algorithm based upon the amount of RAM reserved for the VM.</p>
+<p>Autoscaling of VMs is automatic. Let's say that you had 10 jobs pending, but given the RAM configuration, only enough capacity to run 8 of them? The second two would be queued until capacity one or more of those 8 jobs completed.</p>
+<p>If you find yourself regularly getting into a queued state, there are three potential changes to consider:</p>
+<ol>
+<li>Using Actuated Servers with more RAM</li>
+<li>Allocated less RAM to each job</li>
+<li>Adding more Actuated Servers</li>
+</ol>
+<p>The plan you select will determine how many Actuated Servers you can run, so consider 1. and 2. before 3.</p>
+<h2 id="do-i-need-to-auto-scale-the-actuated-servers">Do I need to auto-scale the Actuated Servers?<a class="headerlink" href="#do-i-need-to-auto-scale-the-actuated-servers" title="Permanent link">&para;</a></h2>
+<p>Please read the section "How are VMs scheduled".</p>
+<p>Auto-scaling Pods or VMs is a quick, painless operation that makes sense for customer traffic, which is generally unpredictable and can be very bursty.</p>
+<p>GitHub Actions tends to be driven by your internal development team, with a predictable pattern of activity. It's unlikely to vary massively day by day, which means autoscaling is less important than with a user-facing website.</p>
+<p>In addition to that, bare-metal servers can take 5-10 minutes to provision and may even include a setup fee or monthly commitment, meaning that what you're used to seeing with Kubernetes or AWS Autoscaling Groups may not translate well, or even be required for CI.</p>
+<p>If you are cost sensitive, you should review the options under <a href="/provision-server">Provision a Server section</a>.</p>
+<p>Depending on your provider, you may also be able to hibernate or suspend servers on a cron schedule to save a few dollars. Actuated will hold jobs in a queue until a server is ready to take them again.</p>
+<h2 id="what-do-i-need-to-change-in-my-workflows-to-use-actuated">What do I need to change in my workflows to use actuated?<a class="headerlink" href="#what-do-i-need-to-change-in-my-workflows-to-use-actuated" title="Permanent link">&para;</a></h2>
+<p>The changes to your workflow YAML file are minimal.</p>
+<p>Just set <code>runs-on</code> to the actuated label plus the amount of CPUs and RAM you'd like. The order is fixed, but the values for vCPU/RAM are flexible and can be set as required.</p>
+<p>You can set something like: <code>runs-on: actuated-4cpu-16gb</code> or <code>runs-on: actuated-arm64-8cpu-32gb</code>.</p>
+<h2 id="is-64-bit-arm-supported">Is 64-bit Arm supported?<a class="headerlink" href="#is-64-bit-arm-supported" title="Permanent link">&para;</a></h2>
+<p>Yes, actuated is built to run on both Intel/AMD and 64-bit Arm hosts, check your subscription plan to see if 64-bit Arm is included. This includes a Raspberry Pi 4B, AWS Graviton, Oracle Cloud Arm instances and potentially any other 64-bit Arm instances which support virtualisation.</p>
+<h2 id="whats-in-the-vm-image-and-how-is-it-built">What's in the VM image and how is it built?<a class="headerlink" href="#whats-in-the-vm-image-and-how-is-it-built" title="Permanent link">&para;</a></h2>
+<p>The VM image contains similar software to the hosted runner image: <code>ubuntu-latest</code> offered by GitHub. Unfortunately, GitHub does not publish this image, so we've done our best through user-testing to reconstruct it, including all the Kernel modules required to run Kubernetes and Docker.</p>
+<p>The image is built automatically using GitHub Actions and is available on a container registry.</p>
+<p>The primary guest OS version is Ubuntu 22.04. Ubuntu 20.04 is available on request.</p>
+<h2 id="what-kernel-version-is-being-used">What Kernel version is being used?<a class="headerlink" href="#what-kernel-version-is-being-used" title="Permanent link">&para;</a></h2>
+<p>The Firecracker team <a href="https://github.com/firecracker-microvm/firecracker/tree/master/resources/guest_configs">provides guest configurations</a>. These may not LTS, or the latest version available, however they are fully functional for CI/CD use-cases and are known to work with Firecracker.</p>
+<p>Stable Kernel version:</p>
+<ul>
+<li>x86_64 - Linux Kernel 5.10.201</li>
+<li>aarch64 - Linux Kernel 5.10.201</li>
+</ul>
+<p>Experimental Kernel version:</p>
+<ul>
+<li>aarch64 - Linux Kernel 6.1.90</li>
+</ul>
+<h3 id="where-are-the-kernel-headers-includes">Where are the Kernel headers / includes?<a class="headerlink" href="#where-are-the-kernel-headers-includes" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following command is only designed for off the shelf cloud image builds of Ubuntu server, and will not work on actuated.</p>
+<div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span><span class="w"> </span>
+</code></pre></div>
+</div>
+<p>For actuated, you'll need to take a different approach to build a DKMS or kmod module for your Kernel.</p>
+<p>Add <a href="https://github.com/self-actuated/get-kernel-sources">self-actuated/get-kernel-sources</a> to your workflow and run it before your build step.</p>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Kernel headers</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">self-actuated/get-kernel-sources@v1</span>
+</code></pre></div>
+<p>An <code>if</code> statement can be added to the block, if you also run the same job on various other types of runners outside of actuated.</p>
+<h3 id="where-is-the-kernel-configuration">Where is the Kernel configuration?<a class="headerlink" href="#where-is-the-kernel-configuration" title="Permanent link">&para;</a></h3>
+<p>You can run a job to print out or dump the configuration from proc, or from /boot/.</p>
+<p>Just create a new job, or an SSH debug session and run:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>modprobe<span class="w"> </span>configs
+cat<span class="w"> </span>/proc/config.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>gunzip<span class="w"> </span>&gt;<span class="w"> </span>/tmp/config
+
+<span class="c1"># Look for a specific config option</span>
+cat<span class="w"> </span>/tmp/config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;CONFIG_DEBUG_INFO_BTF&quot;</span>
+</code></pre></div>
+<h2 id="how-easy-is-it-to-debug-a-runner">How easy is it to debug a runner?<a class="headerlink" href="#how-easy-is-it-to-debug-a-runner" title="Permanent link">&para;</a></h2>
+<p>OpenSSH is pre-installed, but it will be inaccessible from your workstation by default.</p>
+<p>To connect, you can use an <a href="https://inlets.dev/">inlets tunnel</a>, Wireguard VPN or Tailscale ephemeral token (remember: Tailscale is not free for your commercial use) to log into any agent.</p>
+<p>We also offer a SSH gateway in some of our tiers, tell us if this is important to you in your initial contact, or reach out to us via email if you're already a customer.</p>
+<p>See also: <a href="/tasks/debug-ssh">Debug a GitHub Action with SSH</a></p>
+<h2 id="how-can-an-actuated-runner-get-iam-permissions-for-aws">How can an actuated runner get IAM permissions for AWS?<a class="headerlink" href="#how-can-an-actuated-runner-get-iam-permissions-for-aws" title="Permanent link">&para;</a></h2>
+<p>If you need to publish images to Amazon Elastic Container Registry (ECR), you can either assign a role to any EC2 bare-metal instances that you're using with actuated, or use GitHub's built-in OpenID Connect support.</p>
+<p>Web Identity Federation means that a job can assume a role within AWS using Secure Token Service (STS) without needing any long-lived credentials.</p>
+<p>Read more: <a href="https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services">Configuring OpenID Connect in Amazon Web Services</a></p>
+<h2 id="comparison-to-other-solutions">Comparison to other solutions<a class="headerlink" href="#comparison-to-other-solutions" title="Permanent link">&para;</a></h2>
+<p>Feel free <a href="register">to book a call with us</a> if you'd like to understand this comparison in more detail.</p>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Isolated VM</th>
+<th>Speed</th>
+<th>Efficient spread of jobs</th>
+<th>Safely build public repos?</th>
+<th>64-bit Arm support</th>
+<th>Maintenance required</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>actuated.com</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td>Bare-metal</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td>Yes</td>
+<td>Very little</td>
+<td>Fixed monthly cost</td>
+</tr>
+<tr>
+<td>Hosted runners</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td>Poor</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td>None</td>
+<td>Free minutes in plan <code>*</code></td>
+<td>Per build minute</td>
+</tr>
+<tr>
+<td>Standard self-hosted runners</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td>Good</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td>DIY</td>
+<td>Manual setup and updates</td>
+<td>OSS plus management costs</td>
+</tr>
+<tr>
+<td>actions-runtime-controller</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td>Varies <code>*</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td>DIY</td>
+<td>Very involved</td>
+<td>OSS plus management costs</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>1</code> actions-runtime-controller requires use of separate build tools such as Kaniko, which break the developer experience of using <code>docker</code> or <code>docker-compose</code>. If Docker in Docker (DinD) is used, then there is a severe performance penalty and security risk.</p>
+<p><code>2</code> Builds on public GitHub repositories are free with the standard hosted runners, however private repositories require billing information, after the initial included minutes are consumed.</p>
+</blockquote>
+<p>You can only get VM-level isolation from either GitHub hosted runners or Actuated. Standard self-hosted runners have no isolation between builds and actions-runtime-controller requires either a Docker socket to be mounted or Docker In Docker (a privileged container) to build and run containers.</p>
+<h3 id="how-does-actuated-compare-to-a-actions-runtime-controller-arc">How does actuated compare to a actions-runtime-controller (ARC)?<a class="headerlink" href="#how-does-actuated-compare-to-a-actions-runtime-controller-arc" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/actions-runner-controller/actions-runner-controller">actions-runtime-controller (ARC)</a> describes itself as "still in its early stage of development". It was created by an individual developer called <a href="https://github.com/mumoshu">Yusuke Kuoka</a>, and now receives updates from GitHub's team, after having been adopted into the <a href="https://github.com/actions/actions-runner-controller">actions GitHub Organisation</a>.</p>
+<p>Its primary use-case is scale GitHub's self-hosted actions runner using Pods in a Kubernetes cluster. ARC is self-hosted software which means its setup and operation are complex, requiring you to create an properly configure a GitHub App along with its keys. For actuated, you only need to run a single binary on each of your runner hosts and send us an encrypted bootstrap token.</p>
+<p>If you're running <code>npm install</code> or <code>maven</code>, then this may be a suitable isolation boundary for you.</p>
+<p>The default mode for ARC is a reuseable runner, which can run many jobs, and each job could leave side-effects or poison the runner for future job runs.</p>
+<p>If you need to build a container, in a container, on a Kubernetes node offers little isolation or security boundary.</p>
+<p>What if ARC is configured to use "rootless" containers? With a rootless container, you lose access to "root" and <code>sudo</code>, both of which are essential in any kind of CI job. Actuated users get full access to root, and can run <code>docker build</code> without any tricks or losing access to <code>sudo</code>. That's the same experience you get from a hosted runner by GitHub, but it's faster because it's on your own hardware.</p>
+<p>You can even run minikube, KinD, K3s and OpenShift with actuated without any changes.</p>
+<p>ARC runs a container, so that should work on any machine with a modern Kernel, however actuated runs a VM, in order to provide proper isolation.</p>
+<p>That means ARC runners can run pretty much anywhere, but actuated runners need to be on a bare-metal machine, or a VM that supports nested virtualisation.</p>
+<p>See also: <a href="/provision-server">Where can I run my agents?</a></p>
+<h3 id="doesnt-kaniko-fix-all-this-for-arc">Doesn't Kaniko fix all this for ARC?<a class="headerlink" href="#doesnt-kaniko-fix-all-this-for-arc" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/GoogleContainerTools/kaniko">Kaniko</a>, by Google is an open source project for building containers. It's usually run as a container itself, and usually will require root privileges in order to mount the various filesystems layers required.</p>
+<p>See also: <a href="https://suraj.io/post/root-in-container-root-on-host/">Root user inside a container is root on the host</a></p>
+<p>If you're an ARC user and for various reasons, cannot migrate away to a more secure solution like actuated, Kaniko may be a step in the right direction. Google Cloud users could also create a dedicated node pool with gVisor enabled, for some additional isolation.</p>
+<p>However, it can only build containers, and still requires root, and itself is often run in Docker, so we're getting back to the same problems that actuated set out to solve.</p>
+<p>In addition, Kaniko cannot and will not help you to run that container that you've just built to validate it to run end to end tests, neither can it run a KinD cluster, or a Minikube cluster.</p>
+<h2 id="do-we-need-to-run-my-actuated-servers-247">Do we need to run my Actuated Servers 24/7?<a class="headerlink" href="#do-we-need-to-run-my-actuated-servers-247" title="Permanent link">&para;</a></h2>
+<p>Let's say that you wanted to access a single 64-bit Arm runner to speed up your Arm builds from <a href="https://blog.alexellis.io/blazing-fast-ci-with-microvms/">33 minutes to &lt; 2 minutes like in this example</a>.</p>
+<p>The two cheapest options for 64-bit Arm hardware would be:</p>
+<ul>
+<li>Buy a Mac Mini M1, host it in your office or a co-lo with Asahi Linux installed. That's a one-time cost and will last for several years.</li>
+<li>Or you could rent an AWS a1.metal by the hour from AWS with very little up front cost, and pay for the time you use it.</li>
+</ul>
+<p>In both cases, we're not talking about a significant amount of money, <em>however we are sometimes asked about whether Actuated Servers need to be running 24/7</em>.</p>
+<p>The answer if that it's a trade-off between cost and convenience. We recommend running them continually, however you can turn them off when you're not using them if you think it is worth your time to do so.</p>
+<p>If you only needed to run Arm builds from 9-5pm, you could absolutely delete the VM and re-create it with a cron job, just make sure you restore the required files from the original registration of the agent. You may also be able to "suspend" or "hibernate" the host at a reduced cost, this depends on the hosting provider. Feel free to reach out to us if you need help with this.</p>
+<h2 id="is-there-gpu-support">Is there GPU support?<a class="headerlink" href="#is-there-gpu-support" title="Permanent link">&para;</a></h2>
+<p>Yes, both for GitHub and GitLab CI.</p>
+<p>See also: <a href="https://actuated.com/blog/gpus-for-github-actions">Accelerate GitHub Actions with dedicated GPUs</a></p>
+<h2 id="can-virtual-machines-be-launched-within-a-github-action">Can Virtual Machines be launched within a GitHub Action?<a class="headerlink" href="#can-virtual-machines-be-launched-within-a-github-action" title="Permanent link">&para;</a></h2>
+<p>It is possible to launch a Virtual Machine (VM) with KVM from within a Firecracker MicroVM.</p>
+<p>Use-cases may include: building and snapshotting VM images, running Packer, launching VirtualBox and Vagrant, accelerating the Android emulator, building packages for NixOS and other testing which requires KVM.</p>
+<p>Follow an example build that uses Firecracker within a GitHub Action: <a href="https://actuated.com/blog/kvm-in-github-actions">How to run a KVM guest in your GitHub Actions</a></p>
+<p>At time of writing, only Intel and AMD CPUs support nested virtualisation.</p>
+<p>What about Arm? According to our contacts at Ampere, the latest versions of Arm hardware have some support for nested virtualisation, but the patches for the Linux Kernel are not ready.</p>
+<h2 id="can-i-use-a-vm-for-an-actuated-server-instead-of-bare-metal">Can I use a VM for an actuated server instead of bare-metal?<a class="headerlink" href="#can-i-use-a-vm-for-an-actuated-server-instead-of-bare-metal" title="Permanent link">&para;</a></h2>
+<p>If <code>/dev/kvm</code> is available within the VM, or the VM can be configured so that nested virtualisation is available, then you can use a VM as an actuated server. Any VMs that are launched for CI jobs will be launched with nested virtualisation, and will have some additional overheads compared to a bare-metal server.</p>
+<p>See also: <a href="/provision-server">Provision a server</a></p>
+<h2 id="is-windows-or-macos-supported">Is Windows or MacOS supported?<a class="headerlink" href="#is-windows-or-macos-supported" title="Permanent link">&para;</a></h2>
+<p>Linux is the only supported platform for actuated at this time on a AMD64 or 64-bit Arm architecture. We may consider other operating systems in the future, feel free to reach out to us.</p>
+<h2 id="is-actuated-free-and-open-source">Is Actuated free and open-source?<a class="headerlink" href="#is-actuated-free-and-open-source" title="Permanent link">&para;</a></h2>
+<p>Actuated currently uses the <a href="https://github.com/firecracker-microvm/firecracker">Firecracker project</a> to launch MicroVMs to isolate jobs during CI. Firecracker is an open source Virtual Machine Manager used by Amazon Web Services (AWS) to run serverless-style workloads for AWS Lambda.</p>
+<p>Actuated is a commercial B2B product and service created and operated by OpenFaaS Ltd.</p>
+<p><a href="https://github.com/self-actuated/actuated/blob/master/EULA.md">Read the End User License Agreement (EULA)</a></p>
+<p>The website and documentation are available on GitHub and we plan to release some open source tools in the future to improve customer experience.</p>
+<h2 id="is-there-a-risk-that-we-could-get-locked-in-to-actuated">Is there a risk that we could get "locked-in" to actuated?<a class="headerlink" href="#is-there-a-risk-that-we-could-get-locked-in-to-actuated" title="Permanent link">&para;</a></h2>
+<p>No, you can move back to either hosted runners (pay per minute from GitHub) or self-managed self-hosted runners at any time. Bear in mind that actuated solves painful issues with both hosted runners and self-managed self-hosted runners.</p>
+<h2 id="why-is-the-brand-called-actuated-and-selfactuated">Why is the brand called "actuated" and "selfactuated"?<a class="headerlink" href="#why-is-the-brand-called-actuated-and-selfactuated" title="Permanent link">&para;</a></h2>
+<p>The name of the software, product and brand is: "actuated". In some places "actuated" is not available, and we liked "selfactuated" more than "actuatedhq" or "actuatedio" because it refers to the hybrid experience of self-hosted runners.</p>
+<h2 id="privacy-policy-data-security">Privacy policy &amp; data security<a class="headerlink" href="#privacy-policy-data-security" title="Permanent link">&para;</a></h2>
+<p>Actuated is a managed service operated by OpenFaaS Ltd, registered company number: 11076587.</p>
+<p>It has both a Software as a Service (SaaS) component ("control plane") aka ("Actuated") and an agent ("Actuated Agent"), which runs on a Server supplied by the customer ("Customer Server").</p>
+<h3 id="data-storage">Data storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h3>
+<p>The control-plane of actuated collects and stores the following data in a database hosted and managed by <a href="https://www.digitalocean.com/">DigitalOcean LLC</a>.</p>
+<ul>
+<li>Job events for the organisation where a label of "actuated*" is found, including:<ul>
+<li>Organisation name</li>
+<li>Repository name</li>
+<li>Actor name for each job</li>
+<li>Build name</li>
+<li>Build start / stop time</li>
+<li>Build status</li>
+</ul>
+</li>
+</ul>
+<p>Job events are used to schedule queued jobs to servers, to provide technical support, and for insights and reports available within the actuated dashboard.</p>
+<p>The following is collected from agents:</p>
+<ul>
+<li>Agent version</li>
+<li>Hostname &amp; uptime</li>
+<li>Platform information - Operating System and architecture</li>
+<li>System capacity - total and available RAM &amp; CPU</li>
+</ul>
+<p>In addition, for support requests, we may need to collect the logs of the actuated agent process remotely from:</p>
+<ul>
+<li>VMs launched for jobs, stored at <code>/var/log/actuated/</code></li>
+</ul>
+<p>This information is required to operate the control plane including scheduling of VMs and for technical support.</p>
+<p><strong>Metrics from servers</strong></p>
+<p>The agent exposes a number of metrics in Prometheus format, which are used by the actuated team to monitor the health and reliability of your servers, which has a 14 day retention policy. This data is stored by <a href="https://grafana.com">Grafana Labs</a> on their hosted <a href="https://grafana.com/products/cloud/">Grafana Cloud</a> product:</p>
+<ul>
+<li>Number of jobs runner per server</li>
+<li>System load average</li>
+<li>Free RAM</li>
+<li>Egress counters - i.e. RX/TX bytes</li>
+<li>Disk usage counters</li>
+</ul>
+<p>Upon cancelling a subscription, a customer may request that their data is deleted. In addition, they can uninstall the GitHub App from their organisation, and deactivate the GitHub OAuth application used to authenticate to the Actuated Dashboard.</p>
+<h3 id="data-security-encryption">Data security &amp; encryption<a class="headerlink" href="#data-security-encryption" title="Permanent link">&para;</a></h3>
+<p>TLS is enabled on the actuated control plane, the dashboard and on each agent. The TLS certificates have not expired and and have no known issues.</p>
+<p>Each customer is responsible for hosting their own Servers and installing appropriate firewalls or access control.</p>
+<p>Each Customer Server requires a unique token which is encrypted using public key cryptography, before being shared with OpenFaaS Ltd. This token is used to authenticate the agent to the control plane.</p>
+<p>Traffic between the control plane and Customer Server is only made over HTTPS, using TLS encryption and API tokens. In addition, the token required for GitHub Actions is double encrypted with an RSA key pair, so that only the intended agent can decrypt and use it. These tokens are short-lived and expire after 59 minutes.</p>
+<p>Event data recorded from GitHub Actions is stored and used to deliver quality of service and scheduling. This data is stored on a server managed by DigitalOcean LLC in the United Kingdom. The control plane is hosted with Linode LLC in the United Kingdom.</p>
+<p>No data is shared with third parties.</p>
+<h3 id="software-development-life-cycle">Software Development Life Cycle<a class="headerlink" href="#software-development-life-cycle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A Version Control System (VCS) is being Used - GitHub is used by all employees to store code</li>
+<li>Only Authorized Employees Access Version Control - multiple factor authentication (MFA) is required by all employees</li>
+<li>Only Authorized Employees Change Code - no changes can be pushed to production without having a pull request approval from senior management</li>
+<li>Production Code Changes Restricted - Only authorized employees can push orm make changes to production code</li>
+<li>All changes are documented through pull requests tickets and commit messages</li>
+<li>Vulnerability management - vulnerability management is provided by GitHub.com. Critical vulnerabilities are remediated in a timely manner</li>
+</ul>
+<p>Terminated Employee Access Revoked Within One Business Day - all access to source control management and production systems is revoked within one business day of an employee leaving the company.</p>
+<p>Access to corporate network, production machines, network devices, and support tools requires a unique ID. This ID is only issued to employees and is revoked upon termination.</p>
+<p>Policies Cover Employee Confidentiality - OpenFaaS Ltd policies require employees to keep confidential any information they learn while handling customer data.</p>
+<h3 id="contact-information-available-to-customers">Contact Information Available to Customers<a class="headerlink" href="#contact-information-available-to-customers" title="Permanent link">&para;</a></h3>
+<p>OpenFaaS Ltd has provided an email address in a customer-accessible support documentation where support contact information is readily available. Users are encouraged to contact appropriate OpenFaaS Ltd if they become aware of items such as operational or security failures, incidents, system problems, concerns, or other issues/complaints.</p>
+<h3 id="reliability-and-uptime">Reliability and uptime<a class="headerlink" href="#reliability-and-uptime" title="Permanent link">&para;</a></h3>
+<p>Authorized users have access to centralised logging endpoints, to query the logs of the Actuated agent installed on Customer Servers, ad-hoc, for the purpose of support and troubleshooting.</p>
+<p>Authorized users have access to alerts, dashboards and may use this data to improve the service, or to proactively contact customers when there is a suspected issue.</p>
+<p>Centralised monitoring and metrics gathered from the control plane have a 14-day retention period, after which data is automatically deleted.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 OpenFaaS Ltd
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
