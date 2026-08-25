@@ -17,6 +17,16 @@ mkdocs serve
 
 Access the site at http://127.0.0.1:8000
 
+### Docker
+
+Run the documentation site in a container:
+
+```bash
+docker run --rm -it -p 8000:8000 -v "$PWD:/docs" squidfunk/mkdocs-material:latest
+```
+
+Access the site at http://127.0.0.1:8000
+
 
 ## Contributing
 

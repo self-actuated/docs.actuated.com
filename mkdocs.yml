@@ -73,9 +73,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      # emoji_generator: !!python/name:pymdownx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -97,7 +96,11 @@ nav:
   - Onboarding:
       - Register your GitHub Organisation: register.md
       - Provision a Server: provision-server.md
-      - Install the Agent: install-agent.md
+      - Install the Linux Agent: install-agent.md
+      - Install the macOS Agent:
+          - Install and join the agent: install-macos-agent.md
+          - Prepare the base image: prepare-macos-base.md
+      - Expose an agent: expose-agent.md
       - Run a test build: test-build.md
   - Tasks:
     - Right Size the VM: tasks/right-size-vm.md

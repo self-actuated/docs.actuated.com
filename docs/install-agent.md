@@ -1,5 +1,8 @@
 # Add your first agent to actuated
 
+This page covers installation on a Linux host. To run isolated macOS jobs on
+Apple Silicon, see [Install the macOS Agent](/install-macos-agent/).
+
 actuated is split into three parts:
 
 1. An Actuated Agent (agent) that you run on your own machines or VMs (server), which can launch a VM with a single-use GitHub Actions runner.
