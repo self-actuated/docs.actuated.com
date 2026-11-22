@@ -19,7 +19,7 @@ Pick your Actuated Servers carefully using our guide: [Pick a host for actuated]
 
 Make sure you've read the [Actuated EULA](https://github.com/self-actuated/actuated/blob/master/EULA.md) before registering your organisation with the actuated GitHub App, or starting the agent binary on one of your hosts.
 
-If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 22.04 as the host operating system on your Server.
+If you missed it in the "Provision a Server" page, we recommend you use Ubuntu 22.04 as the host operating system on your Server. Ubuntu 24.04 and 26.04 are also supported.
 
 ## Auto Enrollment
 

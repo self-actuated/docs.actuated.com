@@ -17,7 +17,7 @@ So what makes one server quicker than another?
 * Multi-tenancy - are other customers contenting for the same resources, or is the server dedicated to your team?
 
 !!! info "What Operating System (OS) should I use?"
-    The certified Operating System for an Actuated server is: Ubuntu Server 22.04.
+    The certified Operating System for an Actuated server is: Ubuntu Server 22.04. Ubuntu Server 24.04 and 26.04 are also supported.
 
 ## How many VMs or jobs can a server run?
 
@@ -32,7 +32,7 @@ For the absolute best value in terms of performance and cost, we recommend the f
 * *x86_64* - [Hetzner's A102](https://www.hetzner.com/dedicated-rootserver/ax102)
 * *Arm64* - [Hetzner's RX170](https://www.hetzner.com/dedicated-rootserver/matrix-rx)
 
-Hetzner machines come with a "rescue" system, use it to install Ubuntu 22.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
+Hetzner machines come with a "rescue" system, use it to install Ubuntu 22.04, 24.04 or 26.04, and make sure you disable software RAID, so that the two NVMe drives are presented as separate devices. One will run the system, the other will be used for filesystems for all the VMs.
 
 ## Our research on servers for actuated
 
